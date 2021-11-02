@@ -85,10 +85,7 @@ export default function FAQSection() {
                   <Accordion.Header>Where can I park?</Accordion.Header>
                   <Accordion.Body>
                     You can park in{" "}
-                    <a
-                      href="http://maps.msu.edu/interactive/index.php?location=DPLE"
-                      target="_blank"
-                    >
+                    <a href="http://maps.msu.edu/interactive/index.php?location=DPLE">
                       Ramp 5
                     </a>{" "}
                     except for spaces on the first floor, spaces with a

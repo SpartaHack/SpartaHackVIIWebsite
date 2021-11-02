@@ -10,10 +10,11 @@ import {
 } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
-import { doc, updateDoc, deleteDoc } from "firebase/firestore";
+//import { doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useForm } from "react-hook-form";
-import CenteredContainer from "./CenteredContainer";
+// import CenteredContainer from "./CenteredContainer";
 import MSUBackground from "../MSUBackground";
 
 export default function UserForm({ preLoadedValues }) {
@@ -27,29 +28,29 @@ export default function UserForm({ preLoadedValues }) {
     currentUser,
     updateProfileEmail,
     updateProfilePassword,
-    deleteUserAccount,
+    // deleteUserAccount,
   } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  async function handleDelete(event) {
-    event.preventDefault();
+  // async function handleDelete(event) {
+  //   event.preventDefault();
 
-    // window.confirm message
-    if (window.confirm("Are you sure you want to delete your account?")) {
-      try {
-        setError("");
-        setLoading(true);
-        await deleteDoc(doc(db, "users", currentUser.uid));
-        await deleteUserAccount();
-        history.push("/");
-      } catch {
-        setError("Failed to delete account");
-      }
-      setLoading(false);
-    }
-  }
+  //   // window.confirm message
+  //   if (window.confirm("Are you sure you want to delete your account?")) {
+  //     try {
+  //       setError("");
+  //       setLoading(true);
+  //       await deleteDoc(doc(db, "users", currentUser.uid));
+  //       await deleteUserAccount();
+  //       history.push("/");
+  //     } catch {
+  //       setError("Failed to delete account");
+  //     }
+  //     setLoading(false);
+  //   }
+  // }
 
   // function userSubmit(event) {
   //   event.preventDefault();

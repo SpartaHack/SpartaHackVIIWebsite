@@ -9,7 +9,7 @@ import { db } from "../../firebase";
 // import MSUBackground from "../MSUBackground";
 import UserForm from "./UserForm";
 import { useAuth } from "../contexts/AuthContext";
-import MSUBackground from "../MSUBackground";
+// import MSUBackground from "../MSUBackground";
 
 export default function Dashboard() {
   const { currentUser } = useAuth();

@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={HomeSection} />
+        <Route exact path="/SpartaHackVIIWebsite" component={HomeSection} />
         <AuthProvider>
           <PrivateRoute path="/account-updated" component={AccountUpdated} />
           <PrivateRoute path="/dashboard" component={Dashboard} />

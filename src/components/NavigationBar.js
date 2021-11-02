@@ -1,13 +1,12 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const NavigationBar = () => {
   const history = useHistory();
   function directHome() {
-    history.push("/");
+    history.push("/SpartaHackVIIWebsite");
   }
 
   return (

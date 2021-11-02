@@ -4,7 +4,7 @@ function GoogleCloudPlatformLogo(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="auto"
+      height="5em"
       width="17em"
       xmlSpace="preserve"
       y={0}

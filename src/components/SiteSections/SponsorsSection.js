@@ -25,7 +25,11 @@ export default function SponsorsSection() {
             <FordLogo />{" "}
           </SponsorCard>
           <SponsorCard cardNumber="02">
-            <img style={{ height: "auto", width: "10rem" }} src={GitHubLogo} />{" "}
+            <img
+              style={{ height: "auto", width: "10rem" }}
+              src={GitHubLogo}
+              alt="github logo"
+            />{" "}
           </SponsorCard>
           <SponsorCard cardNumber="03">
             {" "}
@@ -34,13 +38,18 @@ export default function SponsorsSection() {
         </div>
         <div className="sponsors-cards-holder-two pt-5">
           <SponsorCard cardNumber="04">
-            <img style={{ height: "auto", width: "100%" }} src={StockXLogo} />
+            <img
+              style={{ height: "auto", width: "100%" }}
+              src={StockXLogo}
+              alt="stockXLogo"
+            />
           </SponsorCard>
           <SponsorCard cardNumber="05">
             {" "}
             <img
               style={{ height: "auto", width: "12rem" }}
               src={AptivLogo}
+              alt="aptiv logo"
             />{" "}
           </SponsorCard>
           <SponsorCard cardNumber="06">
@@ -48,6 +57,7 @@ export default function SponsorsSection() {
             <img
               style={{ height: "auto", width: "12rem" }}
               src={RocketLogo}
+              alt="rockerLogo"
             />{" "}
           </SponsorCard>
         </div>

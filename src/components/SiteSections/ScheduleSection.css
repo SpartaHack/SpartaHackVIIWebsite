@@ -10,9 +10,6 @@
 .schedule-header-text {
   color: white;
   font-size: 4.6875rem;
-  /* position: relative; */
-  /* Figure out z-index thing if tou want the top of the letters to be cut off */
-  /* top: 65%; */
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }

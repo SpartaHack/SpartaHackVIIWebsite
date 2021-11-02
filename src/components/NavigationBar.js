@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 const NavigationBar = () => {
   const history = useHistory();
   function directHome() {
-    history.push("/SpartaHackVIIWebsite");
+    history.push("/");
   }
 
   return (

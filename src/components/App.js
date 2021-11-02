@@ -12,7 +12,7 @@ import AccountUpdated from "./authentication/AccountUpdated";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={HomeSection} />
         <AuthProvider>

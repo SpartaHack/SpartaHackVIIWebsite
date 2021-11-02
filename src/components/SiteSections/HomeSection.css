@@ -1,0 +1,221 @@
+.HeroContent {
+  /* Center this on the  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: black; */
+  height: 60vh;
+}
+
+.ShMainLogo {
+  max-width: 90%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .ShMainLogo {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .ShMainLogo {
+    max-width: 60%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ShMainLogo {
+    max-width: 35%;
+    height: auto;
+  }
+}
+
+.Date {
+  color: white;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .Date {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .Date {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 992px) {
+  .Date {
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Date {
+    color: white;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.Location {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .Location {
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .Location {
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 992px) {
+  .Location {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Location {
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.MLHLogo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .MLHLogo {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    right: 10%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .MLHLogo {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    right: 10%;
+    z-index: 1;
+  }
+}
+
+.ScrollIndicator {
+  width: 3rem;
+  height: auto;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .ScrollIndicator {
+    width: 3rem;
+    height: auto;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 992px) {
+  .ScrollIndicator {
+    width: 3rem;
+    height: auto;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.scroll {
+  color: red;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.fb-icon {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  left: 10%;
+  bottom: 6%;
+}
+
+.instagram-icon {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  left: 6%;
+  bottom: 6%;
+}
+
+.twitter-icon {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  left: 14%;
+  bottom: 6%;
+}

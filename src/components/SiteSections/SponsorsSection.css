@@ -1,0 +1,46 @@
+.sponsors-section {
+  /* height: 100vh; */
+  padding-bottom: 5em;
+  position: relative;
+  background-color: black;
+}
+
+.sponsors-section-header-underline-container {
+  position: relative;
+}
+
+.sponsors-section-header-text {
+  color: white;
+  font-size: 4.6875rem;
+  /* position: relative; */
+  /* Figure out z-index thing if tou want the top of the letters to be cut off */
+  /* top: 65%; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.sponsors-section-header-text-underline {
+  background-color: red;
+  position: absolute;
+  /* bottom: 1%; */
+  top: 99%;
+  left: 4%;
+  height: 3px;
+  width: 310px;
+}
+
+.sponsors-cards-holder-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 4%;
+}
+
+.sponsors-cards-holder-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 4%;
+}

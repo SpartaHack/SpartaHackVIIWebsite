@@ -1,0 +1,42 @@
+.sponsor-inner-card {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 160px;
+  width: 285px;
+  border-radius: 10px;
+  background: black;
+  position: absolute;
+  top: 47%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.sponsor-card-background {
+  width: 375px;
+  height: 250px;
+  background-image: radial-gradient(
+    circle at 5px 5px,
+    #717171 3px,
+    transparent 0
+  );
+  background-size: 25px 25px;
+  position: relative;
+  margin-left: 2em;
+}
+
+.sponsor-card-number {
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  font-size: 1.35rem;
+  position: relative;
+  left: -10%;
+  top: 1%;
+}
+
+.sponsor-logo-positioning-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

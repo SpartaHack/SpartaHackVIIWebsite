@@ -1,0 +1,87 @@
+.schedule-card-dots-holder {
+  width: 375px;
+  height: 500px;
+  /* outline: 5px solid red; */
+  position: relative;
+  /* left: 10%; */
+  top: 10%;
+  background-image: radial-gradient(
+    circle at 5px 5px,
+    #717171 2px,
+    transparent 0
+  );
+  background-size: 25px 25px;
+}
+
+.schedule-dark-overlay {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background-color: black;
+  opacity: 80%;
+}
+
+.schedule-dark-overlay-date {
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  font-size: 1.5625rem;
+}
+
+.schedule-dark-overlay-slot-one {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-two {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-three {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-four {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-five {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-six {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.schedule-dark-overlay-slot-seven {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+/* .schedule-dark-overlay-line-accent {
+  height: 50px;
+  width: 5px;
+  background-color: red;
+  border-radius: 30px;
+  transform: rotate(45deg);
+  position: relative;
+  right: 23px;
+  bottom: 25px;
+} */
+
+.schedule-accent-circle {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -6%;
+  left: 91%;
+}

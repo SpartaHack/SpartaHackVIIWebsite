@@ -19,28 +19,27 @@ const NavigationBar = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="#home" onClick={directHome}>
+          <Navbar.Brand href="#home" onClick={directHome} style={{fontFamily : "Montserrat"}}> 
             SPARTAHACK VII
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link onClick={directHome}>Home</Nav.Link>
-              <Nav.Link href="#About">About</Nav.Link>
-              <Nav.Link>
+              <Nav.Link href="#About" style={{fontFamily : "Montserrat"}}>About</Nav.Link>
+              <Nav.Link style={{fontFamily : "Montserrat"}}>
                 <Link to="Schedule" duration={500}>
                   {" "}
                   Schedule
                 </Link>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link style={{fontFamily : "Montserrat"}}>
                 {" "}
                 <Link to="FAQ" duration={500}>
                   {" "}
                   FAQ
                 </Link>
-              </Nav.Link>
-              <Nav.Link href="#Sponsors">
+              </Nav.Link >
+              <Nav.Link href="#Sponsors" style={{fontFamily : "Montserrat"}}>
                 {" "}
                 <Link to="Sponsors" duration={500}>
                   {" "}

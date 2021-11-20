@@ -1,6 +1,5 @@
 .sponsors-section {
-  /* height: 100vh; */
-  padding-bottom: 5em;
+  padding-bottom: 15em;
   position: relative;
   background-color: black;
 }
@@ -31,14 +30,7 @@
 
 .sponsors-cards-holder-one {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-left: 4%;
-}
-
-.sponsors-cards-holder-two {
-  display: flex;
+  /* gap: 2em; */
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;

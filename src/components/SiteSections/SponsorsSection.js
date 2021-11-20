@@ -35,8 +35,6 @@ export default function SponsorsSection() {
             {" "}
             <GoogleCloudPlatformLogo />{" "}
           </SponsorCard>
-        </div>
-        <div className="sponsors-cards-holder-two pt-5">
           <SponsorCard cardNumber="04">
             <img
               style={{ height: "auto", width: "100%" }}

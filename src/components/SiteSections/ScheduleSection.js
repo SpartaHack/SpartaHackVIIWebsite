@@ -39,7 +39,7 @@ const ScheduleSection = () => {
             eventThree="12:00 PM - Lunch"
             eventFour="9:00 AM - Judging"
             eventFive="9:00 AM - Closing Event"
-            eventSix="This is a test"
+            eventSix=""
             eventSeven=""
           />
         </div>

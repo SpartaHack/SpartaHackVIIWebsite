@@ -1,20 +1,59 @@
 .sponsor-inner-card {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  height: 160px;
-  width: 285px;
+  height: 115px;
+  width: 215px;
   border-radius: 10px;
   background: black;
   position: absolute;
-  top: 47%;
+  top: 46%;
   left: 48%;
   transform: translate(-50%, -50%);
 }
 
+@media (min-width: 768px){
+  .sponsor-inner-card {
+    height: 160px;
+    width: 285px;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+@media (min-width: 992px){
+  .sponsor-inner-card {
+    height: 160px;
+    width: 285px;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+@media (min-width: 1200px){
+  .sponsor-inner-card {
+    height: 160px;
+    width: 285px;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
 .sponsor-card-background {
-  width: 375px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   background-image: radial-gradient(
     circle at 5px 5px,
     #717171 3px,
@@ -24,6 +63,57 @@
   position: relative;
   margin-left: 2em;
 }
+
+@media (min-width: 768px){
+  .sponsor-card-background {
+    width: 375px;
+    height: 250px;
+    background-image: radial-gradient(
+      circle at 5px 5px,
+      #717171 3px,
+      transparent 0
+    );
+    background-size: 25px 25px;
+    position: relative;
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 992px){
+  .sponsor-card-background {
+    width: 375px;
+    height: 250px;
+    background-image: radial-gradient(
+      circle at 5px 5px,
+      #717171 3px,
+      transparent 0
+    );
+    background-size: 25px 25px;
+    position: relative;
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 1200px){
+  .sponsor-card-background {
+    width: 375px;
+    height: 250px;
+    background-image: radial-gradient(
+      circle at 5px 5px,
+      #717171 3px,
+      transparent 0
+    );
+    background-size: 25px 25px;
+    position: relative;
+    margin-left: 2em;
+  }
+}
+
+
+
+
+
+
 
 .sponsor-card-number {
   font-family: "Montserrat", sans-serif;

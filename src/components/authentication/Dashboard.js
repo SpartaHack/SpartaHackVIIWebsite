@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { Form, Card, Alert, Button } from "react-bootstrap";
+import { Card} from "react-bootstrap";
 // import { useAuth } from "../contexts/AuthContext";
 // import { useHistory } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
@@ -9,7 +9,9 @@ import { db } from "../../firebase";
 // import MSUBackground from "../MSUBackground";
 import UserForm from "./UserForm";
 import { useAuth } from "../contexts/AuthContext";
+import MSUBackground from "../MSUBackground";
 // import MSUBackground from "../MSUBackground";
+import CenteredContainer from "./CenteredContainer";
 
 export default function Dashboard() {
   const { currentUser } = useAuth();
@@ -27,6 +29,6 @@ export default function Dashboard() {
   return userData ? (
     <UserForm preLoadedValues={userData} />
   ) : (
-    <div> Loading... </div>
+    <MSUBackground/>
   );
 }

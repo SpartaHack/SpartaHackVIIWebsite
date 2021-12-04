@@ -4,11 +4,13 @@ import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
 import MSUBackground from "../MSUBackground";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login } = useAuth();
+  const { login, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -16,11 +18,30 @@ export default function Login() {
   async function handleSubmit(event) {
     event.preventDefault();
 
+
+    // if s document associated wit the user.uid is present in the users db 
+    // Take the user to the dashboard 
+    // Else take the user to the application page 
+
     try {
       setError("");
       setLoading(true);
+
+      // First an foremost log the user into their account       
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push("/dashboard");
+
+      // Get the document snapshot of related to the currently signed in user 
+      const docRef = doc(db, "users", currentUser.uid);
+      const docSnap = await getDoc(docRef);
+      
+      // If a document exists then the person has aldready applied to SH and we can send then to their dash board 
+      // Else they still need to make an application so we send them there. 
+      if (docSnap.exists()) {
+        history.push("/dashboard");
+      } else { 
+        history.push("/application");
+      }
+
     } catch {
       setError("Failed to login.");
     }

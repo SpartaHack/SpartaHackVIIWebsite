@@ -44,9 +44,11 @@ export default function AccountUpdated() {
             >
               Go to Dashboard
             </Button>
-            <Button className="mb-3" variant="link" onClick={logoutHandler}>
-              Log Out
-            </Button>
+            <div className="text-center w-100 mt-2 ">
+              <Button className="mb-3" variant="link" onClick={logoutHandler}>
+                Log Out
+              </Button>
+            </div>
           </Card.Body>
         </Card>
       </CenteredContainer>

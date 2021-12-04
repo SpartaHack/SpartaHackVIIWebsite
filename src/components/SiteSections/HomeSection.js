@@ -9,6 +9,7 @@ import FAQSection from "./FAQSection";
 import SponsorsSection from "./SponsorsSection";
 import FooterSection from "./FooterSection";
 import MSUBackground from "../MSUBackground";
+import MSUBackground2 from "../MSUBackground2";
 
 const HomeSection = () => {
   const history = useHistory();
@@ -16,7 +17,7 @@ const HomeSection = () => {
 
   return (
     <div className="sections-holder">
-      <MSUBackground>
+      <MSUBackground2>
         <div className="HeroContent">
           {/* Main Logo  */}
           <svg
@@ -260,12 +261,6 @@ const HomeSection = () => {
 
           <h3 className="scroll"> Scroll</h3>
 
-          {/* <FaFacebookSquare className="fb-icon" />
-
-          <FaInstagram className="instagram-icon" />
-
-          <FaTwitterSquare className="twitter-icon" /> */}
-
           <svg
             className="ScrollIndicator"
             xmlns="http://www.w3.org/2000/svg"
@@ -282,12 +277,12 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-      </MSUBackground>
+      </MSUBackground2>
 
-      <ScheduleSection />
-      <FAQSection />
-      <SponsorsSection />
-      <FooterSection />
+      {/* <ScheduleSection /> 
+      <FAQSection /> */}
+      {/* <SponsorsSection /> 
+      <FooterSection /> */}
     </div>
   );
 };

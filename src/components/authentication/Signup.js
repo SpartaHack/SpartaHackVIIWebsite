@@ -4,7 +4,9 @@ import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
 import MSUBackground from "../MSUBackground";
+import NavigationBar from "../NavigationBar";
 // import NavigationBar from "../NavigationBar";
+
 
 export default function Signup() {
   const emailRef = useRef();
@@ -41,7 +43,7 @@ export default function Signup() {
   }
 
   return (
-    <div>
+    <div className="signup-background">
       <MSUBackground>
         <CenteredContainer>
           <Card>
@@ -75,11 +77,12 @@ export default function Signup() {
               </Form>
             </Card.Body>
             <div className="text-center w-100 mt-2 pb-3">
-              Aldready have an account? <Link to="/login"> Log In </Link>
+            Already have an account? <Link to="/login"> Log In </Link>
             </div>
           </Card>
         </CenteredContainer>
       </MSUBackground>
+
     </div>
   );
 }

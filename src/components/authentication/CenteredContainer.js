@@ -5,9 +5,9 @@ export default function CenteredContainer({ children }) {
   return (
     <Container
       className="main-holder d-flex justify-content-center align-items-center"
-      style={{ minHeight: "94vh" }}
+      style={{ minHeight: "95vh" }}
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" style={{ maxWidth: "400px" , paddingTop:"3rem", paddingBottom:"3rem"}}>
         {children}
       </div>
     </Container>

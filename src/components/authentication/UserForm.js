@@ -107,14 +107,14 @@ export default function UserForm({ preLoadedValues }) {
           className="main-holder d-flex justify-content-center align-items-center"
           style={{ minHeight: "94vh" }}
         >
-          <div className="w-100" style={{ maxWidth: "1200px" }}>
+          <div className="w-100" style={{ maxWidth: "1200px", paddingBottom: "3em", paddingTop: "3em"}}>
             <Card>
               <Card.Body>
                 <h2 className="text-center mb-4"> Dashboard </h2>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit(userSubmit)}>
                   <Row>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Email</Form.Label>
                         <Form.Control
@@ -125,7 +125,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Password</Form.Label>
                         <Form.Control
@@ -135,7 +135,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4} >
                       <Form.Group className="mb-3">
                         <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control
@@ -147,7 +147,7 @@ export default function UserForm({ preLoadedValues }) {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Name</Form.Label>
                         <Form.Control
@@ -159,7 +159,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Date of Birth</Form.Label>
                         <Form.Control
@@ -170,7 +170,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Education Level</Form.Label>
                         <Form.Control
@@ -184,7 +184,7 @@ export default function UserForm({ preLoadedValues }) {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>University</Form.Label>
                         <Form.Control
@@ -196,7 +196,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Expected Graduation Date</Form.Label>
                         <Form.Control
@@ -207,7 +207,7 @@ export default function UserForm({ preLoadedValues }) {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Major</Form.Label>
                         <Form.Control
@@ -221,7 +221,7 @@ export default function UserForm({ preLoadedValues }) {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Travel Origin</Form.Label>
                         <Form.Control
@@ -234,7 +234,7 @@ export default function UserForm({ preLoadedValues }) {
                       </Form.Group>
                     </Col>
 
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>No. Hackathons Attended</Form.Label>
                         <Form.Control
@@ -247,7 +247,7 @@ export default function UserForm({ preLoadedValues }) {
                       </Form.Group>
                     </Col>
 
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>LinkedIn Account (Optional) </Form.Label>
                         <Form.Control
@@ -260,7 +260,7 @@ export default function UserForm({ preLoadedValues }) {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Race </Form.Label>
                         <Form.Select
@@ -293,7 +293,7 @@ export default function UserForm({ preLoadedValues }) {
                         </Form.Select>
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Gender</Form.Label>
                         <Form.Select
@@ -310,7 +310,7 @@ export default function UserForm({ preLoadedValues }) {
                         </Form.Select>
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md = {4}>
                       <Form.Group className="mb-3">
                         <Form.Label>Phone</Form.Label>
                         <Form.Control

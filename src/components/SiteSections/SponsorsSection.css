@@ -1,5 +1,5 @@
 .sponsors-section {
-  padding-bottom: 15em;
+  padding-bottom: 10em;
   position: relative;
   background-color: black;
 }
@@ -11,9 +11,6 @@
 .sponsors-section-header-text {
   color: white;
   font-size: 4.6875rem;
-  /* position: relative; */
-  /* Figure out z-index thing if tou want the top of the letters to be cut off */
-  /* top: 65%; */
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -21,7 +18,6 @@
 .sponsors-section-header-text-underline {
   background-color: red;
   position: absolute;
-  /* bottom: 1%; */
   top: 99%;
   left: 4%;
   height: 3px;
@@ -30,7 +26,8 @@
 
 .sponsors-cards-holder-one {
   display: flex;
-  /* gap: 2em; */
+  column-gap: 0.7em;
+  row-gap: 3em;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;

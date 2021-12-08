@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import MLHLogo from "./images/Logos/MLHLogo";
 
-const NavigationBar = () => {
+const MainNavBar = () => {
   const history = useHistory();
   function directHome() {
     history.push("/");
@@ -12,13 +13,12 @@ const NavigationBar = () => {
   return (
     <div>
       <Navbar
-        // className="position-absolute mt-5"
         collapseOnSelect
         expand="lg"
         bg="dark"
         variant="dark"
       >
-        <Container>
+        <Container className="nav-inner-containter">
           <Navbar.Brand href="#home" onClick={directHome} style={{fontFamily : "Montserrat"}}> 
             SPARTAHACK VII
           </Navbar.Brand>
@@ -27,37 +27,38 @@ const NavigationBar = () => {
             <Nav className="ms-auto">
               <Nav.Link href="#About" style={{fontFamily : "Montserrat"}}>About</Nav.Link>
               <Nav.Link style={{fontFamily : "Montserrat"}}>
-                <Link to="Schedule" duration={500}>
+                {/* <Link to="Schedule" duration={500}>
                   {" "}
                   Schedule
-                </Link>
+                </Link> */}
+                Schedule
               </Nav.Link>
               <Nav.Link style={{fontFamily : "Montserrat"}}>
                 {" "}
-                <Link to="FAQ" duration={500}>
+                {/* <Link to="FAQ" duration={500}>
                   {" "}
                   FAQ
-                </Link>
+                </Link> */}
+                FAQ
               </Nav.Link >
               <Nav.Link href="#Sponsors" style={{fontFamily : "Montserrat"}}>
                 {" "}
-                <Link to="Sponsors" duration={500}>
+                {/* <Link to="Sponsors" duration={500}>
                   {" "}
                   Sponsors
-                </Link>
+                </Link> */}
+                Sponsors
               </Nav.Link>
-
-              {/* <FaFacebookSquare className="fb-icon" />
-
-          <FaInstagram className="instagram-icon" />
-
-          <FaTwitterSquare className="twitter-icon" /> */}
             </Nav>
           </Navbar.Collapse>
+          <div className="MLHLogo-holder" style={{position: "absolute", right: "5%", top: "0px", width: "5%", height: "auto", zIndex: "1"}}>
+            <MLHLogo />
+          </div>
         </Container>
       </Navbar>
+
     </div>
   );
 };
 
-export default NavigationBar;
+export default MainNavBar;

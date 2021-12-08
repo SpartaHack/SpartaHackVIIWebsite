@@ -1,15 +1,10 @@
 import React from "react";
-// import NavigationBar from "../NavigationBar";
 import "./HomeSection.css";
 import { Button } from "react-bootstrap";
-// import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
 import { useHistory } from "react-router";
-import ScheduleSection from "./ScheduleSection";
-import FAQSection from "./FAQSection";
-import SponsorsSection from "./SponsorsSection";
-import FooterSection from "./FooterSection";
-import MSUBackground from "../MSUBackground";
-import MSUBackground2 from "../MSUBackground2";
+import MainBackground from "../MainBackground"
+
+// Top most section of the Home Page 
 
 const HomeSection = () => {
   const history = useHistory();
@@ -17,8 +12,9 @@ const HomeSection = () => {
 
   return (
     <div className="sections-holder">
-      <MSUBackground2>
+      <MainBackground>
         <div className="HeroContent">
+
           {/* Main Logo  */}
           <svg
             className="ShMainLogo"
@@ -277,12 +273,7 @@ const HomeSection = () => {
             />
           </svg>
         </div>
-      </MSUBackground2>
-
-      {/* <ScheduleSection /> 
-      <FAQSection /> */}
-      {/* <SponsorsSection /> 
-      <FooterSection /> */}
+      </MainBackground>
     </div>
   );
 };

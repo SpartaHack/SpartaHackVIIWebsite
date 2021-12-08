@@ -3,7 +3,8 @@ import { Form, Card, Alert, Button } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
-import MSUBackground from "../MSUBackground";
+import AuthBackground from "../AuthBackground"
+
 export default function ForgotPassword() {
   const emailRef = useRef();
   const { resetPassword } = useAuth();
@@ -27,7 +28,7 @@ export default function ForgotPassword() {
   }
 
   return (
-    <MSUBackground>
+    <AuthBackground>
       <CenteredContainer>
         <Card>
           <Card.Body>
@@ -52,6 +53,6 @@ export default function ForgotPassword() {
           </div>
         </Card>
       </CenteredContainer>
-    </MSUBackground>
+    </AuthBackground>
   );
 }

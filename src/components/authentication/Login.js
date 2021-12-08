@@ -1,55 +1,50 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Form, Card, Alert, Button } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+// import { doc, getDoc } from "firebase/firestore";
+// import { db } from "../../firebase";
 import CenteredContainer from "./CenteredContainer";
-import MSUBackground from "../MSUBackground";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import AuthBackground from "../AuthBackground"
+// import LoginLoading from "./LoginLoading";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login, currentUser } = useAuth();
+  const { login } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  const isMounted = useRef(true); // Initial value _isMounted = true
 
+  useEffect(() => {
+    return () => { // ComponentWillUnmount in Class Component
+        isMounted.current = false;
+    }
+  }, []);
 
-    // if s document associated wit the user.uid is present in the users db 
-    // Take the user to the dashboard 
-    // Else take the user to the application page 
+  async function handleSubmit(e) {
+    e.preventDefault()
 
-    try {
       setError("");
       setLoading(true);
 
-      // First an foremost log the user into their account       
-      await login(emailRef.current.value, passwordRef.current.value);
+      if (isMounted.current) {
 
-      // Get the document snapshot of related to the currently signed in user 
-      const docRef = doc(db, "users", currentUser.uid);
-      const docSnap = await getDoc(docRef);
-      
-      // If a document exists then the person has aldready applied to SH and we can send then to their dash board 
-      // Else they still need to make an application so we send them there. 
-      if (docSnap.exists()) {
-        history.push("/dashboard");
-      } else { 
-        history.push("/application");
+        try {
+          await login(emailRef.current.value, passwordRef.current.value);
+          history.push("/appdash-loading")
+        }catch {
+          setError("login failed");
+        }
       }
 
-    } catch {
-      setError("Failed to login.");
-    }
     setLoading(false);
   }
 
   return (
-    <MSUBackground>
+    <AuthBackground>
       <CenteredContainer>
         <Card>
           <Card.Body>
@@ -77,6 +72,6 @@ export default function Login() {
           </div>
         </Card>
       </CenteredContainer>
-    </MSUBackground>
+    </AuthBackground>
   );
 }

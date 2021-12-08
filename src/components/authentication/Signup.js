@@ -1,50 +1,56 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Form, Card, Alert, Button } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
-import MSUBackground from "../MSUBackground";
-import NavigationBar from "../NavigationBar";
-// import NavigationBar from "../NavigationBar";
+import AuthBackground from "../AuthBackground";
 
 
 export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmationRef = useRef();
-  // const nameRef = useRef();
   const { signUp } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const isMounted = useRef(true); // Initial value _isMounted = true
+
+  useEffect(() => {
+    return () => { // ComponentWillUnmount in Class Component
+        isMounted.current = false;
+    }
+  }, []);
+
   async function handleSubmit(event) {
     event.preventDefault();
-
-    // Check if the passwords are the same
 
     if (passwordRef.current.value !== passwordConfirmationRef.current.value) {
       return setError("Entered passwords are not a match.");
     }
 
-    try {
-      setError("");
-      setLoading(true);
-      await signUp(
-        emailRef.current.value,
-        passwordRef.current.value
-        // nameRef.current.value
-      );
-      history.push("/application");
-    } catch {
-      setError("Account creation failed");
+    if (isMounted.current) {
+      try {
+        setError("");
+        setLoading(true);
+        await signUp(
+          emailRef.current.value,
+          passwordRef.current.value
+        );
+        history.push("/application");
+      } catch {
+        setError("Account creation failed. Login if you have signed up previously.");
+      }
+
     }
+
     setLoading(false);
   }
 
   return (
     <div className="signup-background">
-      <MSUBackground>
+      <AuthBackground>
         <CenteredContainer>
           <Card>
             <Card.Body>
@@ -67,10 +73,6 @@ export default function Signup() {
                     required
                   />
                 </Form.Group>
-                {/* <Form.Group className="mb-4">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="Name" ref={nameRef} required />
-            </Form.Group> */}
                 <Button disabled={loading} className="w-100 mt-4" type="submit">
                   Sign Up
                 </Button>
@@ -81,8 +83,7 @@ export default function Signup() {
             </div>
           </Card>
         </CenteredContainer>
-      </MSUBackground>
-
+      </AuthBackground>
     </div>
   );
 }

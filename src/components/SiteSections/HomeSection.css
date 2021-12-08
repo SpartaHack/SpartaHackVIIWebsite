@@ -127,12 +127,15 @@
   }
 }
 
-.MLHLogo {
-  display: none;
+@media (min-width: 0px) and (max-width: 1599px) {
+  .MLHLogo-holder {
+    display: none;
+  }
 }
 
-@media (min-width: 768px) {
-  .MLHLogo {
+
+@media (min-width: 1600px) {
+  .MLHLogo-holder {
     width: 5%;
     height: auto;
     position: absolute;
@@ -141,15 +144,6 @@
   }
 }
 
-@media (min-width: 992px) {
-  .MLHLogo {
-    width: 5%;
-    height: auto;
-    position: absolute;
-    right: 10%;
-    z-index: 1;
-  }
-}
 
 .ScrollIndicator {
   width: 3rem;
@@ -194,26 +188,30 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.fb-icon {
-  position: absolute;
-  color: white;
-  font-size: 2.5rem;
-  left: 10%;
-  bottom: 6%;
+@media (min-width: 650px) and (orientation: landscape) {
+  .scroll {
+    color: red;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
-.instagram-icon {
-  position: absolute;
-  color: white;
-  font-size: 2.5rem;
-  left: 6%;
-  bottom: 6%;
-}
-
-.twitter-icon {
-  position: absolute;
-  color: white;
-  font-size: 2.5rem;
-  left: 14%;
-  bottom: 6%;
+@media (min-width: 1024px) and (orientation: landscape) {
+  .scroll {
+    color: red;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+  }
 }

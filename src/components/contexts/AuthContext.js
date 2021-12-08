@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../../firebase";
-import { doc, setDoc } from "firebase/firestore";
-import { db } from "../../firebase";
-
+// import { doc, setDoc } from "firebase/firestore";
+// import { db } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -11,7 +10,7 @@ import {
   onAuthStateChanged,
   updateEmail,
   updatePassword,
-  deleteUser,
+  // deleteUser,
 } from "@firebase/auth";
 
 const AuthContext = React.createContext();
@@ -22,7 +21,6 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
-  // const [currentUserInfo, setCurrentUserInfo] = useState();
   const [loading, setLoading] = useState(true);
 
   function signUp(email, password) {
@@ -37,9 +35,9 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
-  function deleteUserAccount() {
-    return deleteUser(auth.currentUser);
-  }
+  // function deleteUserAccount() {
+  //   return deleteUser(auth.currentUser);
+  // }
 
   function resetPassword(email) {
     return sendPasswordResetEmail(auth, email);
@@ -53,9 +51,9 @@ export function AuthProvider({ children }) {
     return updatePassword(auth.currentUser, password);
   }
 
-  function uploadApplication(formInfo) {
-    return setDoc(doc(db, "users", currentUser.uid), formInfo);
-  }
+  // function uploadApplication(formInfo) {
+  //   return setDoc(doc(db, "users", currentUser.uid), formInfo);
+  // }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -74,8 +72,8 @@ export function AuthProvider({ children }) {
     resetPassword,
     updateProfileEmail,
     updateProfilePassword,
-    uploadApplication,
-    deleteUserAccount,
+    // uploadApplication,
+    // deleteUserAccount,
   };
 
   return (

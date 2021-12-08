@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import CenteredContainer from "./CenteredContainer";
 import { useHistory } from "react-router-dom";
-import MSUBackground from "../MSUBackground";
 import { useAuth } from "../contexts/AuthContext";
+import AuthBackground from "../AuthBackground"
+
+// Component responsible for indicating to the user that a sucessful update of their info has occured
 
 export default function AccountUpdated() {
   const history = useHistory();
@@ -12,7 +14,7 @@ export default function AccountUpdated() {
   const [loading, setLoading] = useState(false);
 
   function goToDash() {
-    history.push("/dashboard");
+    history.push("/appdash-loading");
   }
 
   async function logoutHandler(event) {
@@ -30,7 +32,7 @@ export default function AccountUpdated() {
   }
 
   return (
-    <MSUBackground>
+    <AuthBackground>
       <CenteredContainer>
         <Card>
           <Card.Body>
@@ -52,6 +54,6 @@ export default function AccountUpdated() {
           </Card.Body>
         </Card>
       </CenteredContainer>
-    </MSUBackground>
+    </AuthBackground>
   );
 }

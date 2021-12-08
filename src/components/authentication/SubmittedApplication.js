@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Card, Alert, Button } from "react-bootstrap";
 import CenteredContainer from "./CenteredContainer";
 import { useHistory } from "react-router-dom";
-import MSUBackground from "../MSUBackground";
-// import { useAuth } from "../contexts/AuthContext";
+import AuthBackground from "../AuthBackground"
+
+// Component responsible for notifying users that their application has been sucessfully submitted 
 
 export default function SubmittedApplicaiton() {
   const [error, setError] = useState("");
@@ -16,7 +17,7 @@ export default function SubmittedApplicaiton() {
     try {
       setError("");
       setLoading(true);
-      history.push("/dashboard");
+      history.push("/appdash-loading");
     } catch {
       setError("Failed to get users dashboard");
     }
@@ -24,7 +25,7 @@ export default function SubmittedApplicaiton() {
   }
 
   return (
-    <MSUBackground>
+    <AuthBackground>
       <CenteredContainer>
         <Card>
           <Card.Body>
@@ -44,6 +45,6 @@ export default function SubmittedApplicaiton() {
           </Card.Body>
         </Card>
       </CenteredContainer>
-    </MSUBackground>
+    </AuthBackground>
   );
 }

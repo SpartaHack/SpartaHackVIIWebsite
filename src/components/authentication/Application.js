@@ -11,11 +11,16 @@ import {
 } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory, Prompt } from "react-router-dom";
-import MSUBackground from "../MSUBackground";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../firebase";
+import AuthBackground from "../AuthBackground"
+import AddResume from "./AddResume";
+
+// Component responsible for the gathering of user info for invite and event purposes via an application 
 
 export default function Application() {
   const { register, handleSubmit } = useForm();
-  const { uploadApplication, deleteUserAccount } = useAuth();
+  const { currentUser } = useAuth();
   const [error, setError] = useState("");
   let [isBlocking, setIsBlocking] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -26,17 +31,13 @@ export default function Application() {
     try {
       setError("");
       setLoading(true);
-      await uploadApplication(data);
+      await setDoc(doc(db, "users", currentUser.uid), data)
       history.push("/submitted-application");
     } catch {
       setError("Application failed to send!");
     }
     setLoading(false);
   }
-
-  // If the user tries to exit out of this page we must prompt them 
-  // Two scenarios change in the app (we can make our own prompt)
-  // Change to the browser like closing out the tab (prompt will just be changes might not be saved) 
 
   useEffect(() => {
     window.addEventListener('beforeunload', alertUser)
@@ -50,21 +51,17 @@ export default function Application() {
     e.returnValue = ''
   }
 
-  // Now on the web app side we need to check when the user is trying to go home or somewhere else in the app like 'about' 
-  // if they are then we must also alert them that changes made wont be saved 
-
   return (
     <div className="application-background">
       <Prompt
         when={isBlocking}
-        message="Are you sure you want to leave?"
+        message="You must send your application for changes to be saved. Are you sure you want to leave?"
       />
-      <MSUBackground>
+      <AuthBackground>
         <Container
           className="main-holder d-flex justify-content-center align-items-center"
         >
-          {/* <div className="w-100" style={{ maxWidth: "1200px" }}> */}
-          <Container style={{paddingTop: "3em", paddingBottom: "3em"}}>
+          <Container style={{paddingTop: "3em", paddingBottom: "5em"}}>
             <Row>
               <Col></Col>
               <Col xs = {12}>
@@ -77,10 +74,9 @@ export default function Application() {
                   {error && <Alert variant="danger">{error}</Alert>}
                   <Form onSubmit={handleSubmit(userSubmit)}>
                     <Row>
-                    {/* <Row xs = {1} sm = {1} md = {12} lg = {12} xl = {12} xxl = {12}> */}
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Name</Form.Label>
+                          <Form.Label>Name <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Ex. Jane Doe"
@@ -91,7 +87,7 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Date of Birth</Form.Label>
+                          <Form.Label>Date of Birth <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             type="date"
                             {...register("dateOfBirth")}
@@ -101,7 +97,7 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Education Level</Form.Label>
+                          <Form.Label>Education Level <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Ex. Undergraduate"
@@ -111,11 +107,10 @@ export default function Application() {
                         </Form.Group>
                       </Col>
                     </Row>
-
                     <Row>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>University</Form.Label>
+                          <Form.Label>University <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             {...register("university")}
                             type="text"
@@ -126,7 +121,7 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Expected Graduation Date</Form.Label>
+                          <Form.Label> Graduation Date <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             type="date"
                             {...register("expectedGradDate")}
@@ -136,7 +131,7 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Major</Form.Label>
+                          <Form.Label>Major <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             {...register("major")}
                             type="text"
@@ -146,11 +141,10 @@ export default function Application() {
                         </Form.Group>
                       </Col>
                     </Row>
-
                     <Row>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Travel Origin</Form.Label>
+                          <Form.Label>Travel Origin <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             {...register("travelOrigin")}
                             type="text"
@@ -159,10 +153,9 @@ export default function Application() {
                           />
                         </Form.Group>
                       </Col>
-
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>No. Hackathons Attended</Form.Label>
+                          <Form.Label> Hackathons Attended <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             {...register("hackathonsAttended")}
                             type="text"
@@ -171,10 +164,9 @@ export default function Application() {
                           />
                         </Form.Group>
                       </Col>
-
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>LinkedIn Account (Optional) </Form.Label>
+                          <Form.Label>LinkedIn (Optional) </Form.Label>
                           <Form.Control
                             {...register("linkedin")}
                             type="text"
@@ -183,11 +175,10 @@ export default function Application() {
                         </Form.Group>
                       </Col>
                     </Row>
-
                     <Row>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Race </Form.Label>
+                          <Form.Label>Race <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Select
                             {...register("race")}
                             aria-label="Default select example"
@@ -219,7 +210,7 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Gender</Form.Label>
+                          <Form.Label>Gender <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Select
                             {...register("gender")}
                             aria-label="Default select example"
@@ -235,30 +226,33 @@ export default function Application() {
                       </Col>
                       <Col md = {4}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Phone</Form.Label>
+                          <Form.Label>Phone <span style={{color: "red"}}>*</span></Form.Label>
                           <Form.Control
                             {...register("phone")}
                             type="text"
                             placeholder="Ex. 847-111-2222"
+                            required
                           />
                         </Form.Group>
                       </Col>
                     </Row>
 
+
+                    <AddResume resumeUploading={setLoading}/>
+
                     <Form.Group className="mb-3">
-                      <Form.Label>Statement</Form.Label>
+                      <Form.Label>Statement <span style={{color: "red"}}>*</span></Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={3}
                         {...register("statement")}
                         type="text"
-                        placeholder="Tell us a bit more about you."
+                        placeholder="Succinctly describe your reasons for applying to SpartaHack."
                       />
                     </Form.Group>
-
                     <Button
                       disabled={loading}
-                      className="w-100 mt-4"
+                      className="w-100 mt-1 mb-3"
                       type="submit"
                     >
                       Send Application
@@ -270,9 +264,8 @@ export default function Application() {
               <Col></Col>
             </Row>
           </Container>
-          {/* </div> */}
         </Container>
-      </MSUBackground>
+      </AuthBackground>
     </div>
   );
 }

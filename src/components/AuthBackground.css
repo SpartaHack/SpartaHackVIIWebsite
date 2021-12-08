@@ -1,4 +1,4 @@
-.msu-bg {
+.auth-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("./images/campus_bg\ .jpg");
   background-position: center;
@@ -9,7 +9,7 @@
 
 
 @media (min-width: 768px) and (orientation: landscape) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
@@ -22,33 +22,31 @@
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 100vh;
     }
   
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 125vh;
     }
   
 }
 
 @media (min-width: 992px) and (orientation: portrait) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
@@ -61,27 +59,27 @@
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 100vh;
+      height: 115vh;
     }
   
 }
 
 @media (min-width: 1200px) and (orientation: portrait) {
-  .msu-bg {
+  .auth-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("./images/campus_bg\ .jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 100vh;
+      height: 115vh;
     }
   
 }

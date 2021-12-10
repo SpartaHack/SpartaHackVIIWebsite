@@ -14,7 +14,7 @@ import AppDashLoading from "./authentication/AppDashLoading";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={"/"}>
       <Switch>
         <Route exact path="/" component={HomeSection} />
         <AuthProvider>

@@ -3,6 +3,7 @@ import "./HomeSection.css";
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router";
 import MainBackground from "../MainBackground"
+import ScheduleSection from "./ScheduleSection";
 
 // Top most section of the Home Page 
 
@@ -274,6 +275,7 @@ const HomeSection = () => {
           </svg>
         </div>
       </MainBackground>
+      <ScheduleSection/>
     </div>
   );
 };

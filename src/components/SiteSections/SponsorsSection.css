@@ -1,0 +1,195 @@
+.sponsors-section {
+    /* height: 100vh; */
+    padding-bottom: 5em;
+    position: relative;
+    background-color: black;
+  }
+  
+  .sponsors-section-header-underline-container {
+    position: relative;
+  }
+  
+  .sponsors-section-header-text {
+    color: white;
+    font-size: 2.8125rem;
+    /* position: relative; */
+    /* Figure out z-index thing if tou want the top of the letters to be cut off */
+    /* top: 65%; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+
+  @media (max-width: 576px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+
+  @media (min-width: 576px) and (orientation: portrait) {
+    .sponsors-section-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+  
+  @media (min-width: 576px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: portrait) {
+    .sponsors-section-header-text {
+      font-size: 3.4375rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 3.4375rem;
+    }
+  }
+
+  @media (min-width: 922px) and (orientation: portrait) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 922px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+
+  @media (min-width: 1200px) and (orientation: portrait) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+
+  @media (min-width: 1400px) and (orientation: portrait) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .sponsors-section-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  .sponsors-section-header-text-underline {
+    background-color: red;
+    position: absolute;
+    /* bottom: 1%; */
+    top: 99%;
+    left: 8%;
+    height: 3px;
+    width: 203px;
+  }
+
+  @media (max-width: 576px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 200px;
+    }
+  }
+
+  @media (min-width: 576px) and (orientation: portrait) {
+    .sponsors-section-header-text-underline {
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: 576px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: portrait) {
+    .sponsors-section-header-text-underline {
+      width: 220px;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 230px;
+      left: 5%;
+    }
+  }
+
+  @media (min-width: 922px) and (orientation: portrait) {
+    .sponsors-section-header-text-underline {
+      width: 300px;
+    }
+  }
+  
+  @media (min-width: 922px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 230px;
+    }
+  }
+
+  @media (min-width: 1200px) and (orientation: portrait) {
+    .sponsors-section-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+
+  @media (min-width: 1400px) and (orientation: portrait) {
+    .sponsors-section-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .sponsors-section-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+
+  
+  .sponsors-cards-holder-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 4%;
+  }
+  .sponsors-cards-holder-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 4%;
+    row-gap: 2em;
+    column-gap: 0.72em;
+  }
+  
+  /* .sponsors-cards-holder-two {
+    padding-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 4%;
+  }
+   */

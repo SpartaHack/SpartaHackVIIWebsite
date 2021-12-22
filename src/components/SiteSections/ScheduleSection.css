@@ -1,0 +1,256 @@
+.schedule-section {
+    position: relative;
+    background-color: black;
+  }
+  
+  .schedule-header-underline-container {
+    position: relative;
+  }
+  
+  .schedule-header-text {
+    color: white;
+    font-size: 2.8125rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  /* 485px  we are still good card wise */
+
+  @media (max-width: 576px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+
+  @media (min-width: 576px) and (orientation: portrait) {
+    .schedule-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+  
+  @media (min-width: 576px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 2.8125rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: portrait) {
+    .schedule-header-text {
+      font-size: 3.4375rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 3.4375rem;
+    }
+  }
+
+  @media (min-width: 922px) and (orientation: portrait) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 922px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+
+  @media (min-width: 1200px) and (orientation: portrait) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+
+  @media (min-width: 1400px) and (orientation: portrait) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .schedule-header-text {
+      font-size: 4.6875rem;
+    }
+  }
+  
+  
+  .schedule-header-text-underline {
+    background-color: red;
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+    height: 3px;
+    width: 205px;
+  }
+
+  @media (max-width: 576px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 200px;
+    }
+  }
+
+  @media (min-width: 576px) and (orientation: portrait) {
+    .schedule-header-text-underline {
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: 576px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: portrait) {
+    .schedule-header-text-underline {
+      width: 240px;
+      left: 5%;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 240px;
+      left: 5%;
+    }
+  }
+
+  @media (min-width: 922px) and (orientation: portrait) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+  @media (min-width: 922px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+
+  @media (min-width: 1200px) and (orientation: portrait) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+
+  @media (min-width: 1400px) and (orientation: portrait) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .schedule-header-text-underline {
+      width: 313px;
+    }
+  }
+  
+
+  /* Default media queriy is max width in portrait  */
+  
+  .schedule-cards-holder {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em
+  }
+
+  @media (max-width: 576px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 2em;
+    }
+  }
+
+  @media (min-width: 576px) and (orientation: portrait) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+  @media (min-width: 576px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: portrait) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 3em;
+    }
+  }
+  
+  @media (min-width: 768px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 3em;
+    }
+  }
+
+  @media (min-width: 922px) and (orientation: portrait) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+  @media (min-width: 922px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+
+
+
+  @media (min-width: 1200px) and (orientation: portrait) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+
+  @media (min-width: 1400px) and (orientation: portrait) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .schedule-cards-holder {
+      padding-top: 5em;
+      gap: 5em;
+    }
+  }
+  

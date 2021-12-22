@@ -12,7 +12,7 @@ const ScheduleSection = () => {
           <div className="schedule-header-text-underline"></div>
         </div>
         <div className="schedule-cards-holder">
-          <ScheduleCard
+          {/* <ScheduleCard
             date="Jan 28th"
             eventOne="5:00 PM - Check-In"
             eventTwo="5:30 PM - Kickoff Event"
@@ -39,6 +39,36 @@ const ScheduleSection = () => {
             eventThree="12:00 PM - Lunch"
             eventFour="9:00 AM - Judging"
             eventFive="9:00 AM - Closing Event"
+            eventSix=""
+            eventSeven=""
+          /> */}
+          <ScheduleCard
+            date="Jan 28th"
+            eventOne="Coming Soon!"
+            eventTwo=""
+            eventThree=""
+            eventFour=""
+            eventFive=""
+            eventSix=""
+            eventSeven=""
+          />
+          <ScheduleCard
+            date="Jan 29th"
+            eventOne="Coming Soon!"
+            eventTwo=""
+            eventThree=""
+            eventFour=""
+            eventFive=""
+            eventSix=""
+            eventSeven=""
+          />
+          <ScheduleCard
+            date="Jan 30th"
+            eventOne="Coming Soon!"
+            eventTwo=""
+            eventThree=""
+            eventFour=""
+            eventFive=""
             eventSix=""
             eventSeven=""
           />

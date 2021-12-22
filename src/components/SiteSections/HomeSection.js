@@ -4,6 +4,9 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router";
 import MainBackground from "../MainBackground"
 import ScheduleSection from "./ScheduleSection";
+import SponsorsSection from "./SponsorsSection";
+import FAQSection from "./FAQSection";
+// import FooterSection from "./FooterSection";
 
 // Top most section of the Home Page 
 
@@ -276,6 +279,9 @@ const HomeSection = () => {
         </div>
       </MainBackground>
       <ScheduleSection/>
+      <FAQSection/>
+      <SponsorsSection/>
+      {/* <FooterSection/> */}
     </div>
   );
 };

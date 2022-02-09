@@ -246,7 +246,7 @@ const HomeSection = () => {
           </svg>
 
           {/* Date */}
-          <h3 className="Date"> January 28-30, 2022</h3>
+          <h3 className="Date"> April 8-10, 2022</h3>
           {/* Location */}
           <h3 className="Location"> Wells Hall | MSU</h3>
 
@@ -256,7 +256,7 @@ const HomeSection = () => {
             onClick={authenticationButtonHandler}
             style={{ fontFamily: "Montserrat", fontWeight: "bold" }}
           >
-            Sign Up/Log In
+            Apply Now
           </Button>
 
           <h3 className="scroll"> Scroll</h3>

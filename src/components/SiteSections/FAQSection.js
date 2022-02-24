@@ -29,7 +29,7 @@ export default function FAQSection() {
                   <Accordion.Body>
                     Spartahack is a 36-hour programming marathon and competition
                     held at Michigan State University on the weekend of April
-                    8th-11th. We provide tons of meals, snacks, nap spaces, and
+                    8th-10th. We provide tons of meals, snacks, nap spaces, and
                     swag, free of cost so all you need to worry about is making
                     something cool.
                   </Accordion.Body>

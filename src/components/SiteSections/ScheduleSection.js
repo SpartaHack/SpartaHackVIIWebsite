@@ -43,7 +43,7 @@ const ScheduleSection = () => {
             eventSeven=""
           /> */}
           <ScheduleCard
-            date="Jan 28th"
+            date="Apr 8th"
             eventOne="Coming Soon!"
             eventTwo=""
             eventThree=""
@@ -53,7 +53,7 @@ const ScheduleSection = () => {
             eventSeven=""
           />
           <ScheduleCard
-            date="Jan 29th"
+            date="Apr 9th"
             eventOne="Coming Soon!"
             eventTwo=""
             eventThree=""
@@ -63,7 +63,7 @@ const ScheduleSection = () => {
             eventSeven=""
           />
           <ScheduleCard
-            date="Jan 30th"
+            date="Apr 10th"
             eventOne="Coming Soon!"
             eventTwo=""
             eventThree=""

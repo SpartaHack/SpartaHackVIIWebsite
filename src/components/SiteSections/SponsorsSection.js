@@ -6,8 +6,10 @@ import FordLogo from "../images/Logos/FordLogo";
 import kelloggsLogo from "../images/Logos/kelloggs_logo.png"
 import MSUITLogo from "../images/Logos/MSUIT-logo.png"
 import TwilloQuestLogo from "../images/Logos/twillo_quest_logo.png"
-import MSUFCULogo from "../images/Logos/msufcuLogo.png"
-import WineryLogo from "../images/Logos/wineryLogo.png"
+import MSUFCULogo from "../images/Logos/MSUFCU_LOGO.png"
+import KLANDALogo from "../images/Logos/KL&A_LOGO.png"
+import AOLogo from "../images/Logos/AO_LOGO.svg"
+
 
 export default function SponsorsSection() {
   return (
@@ -36,10 +38,13 @@ export default function SponsorsSection() {
             <img src={TwilloQuestLogo} style={{height: "5.5em", width: "auto"}} alt="TwilloQuest logo"></img>
           </SponsorCard>
           <SponsorCard cardNumber="05">
-            <img src={MSUFCULogo} style={{height: "9em", width: "auto"}} alt="MSUFCU logo"></img>
+            <img src={MSUFCULogo} style={{height: "6em", width: "auto"}} alt="MSUFCU logo"></img>
           </SponsorCard>
           <SponsorCard cardNumber="06">
-            <img src={WineryLogo} style={{height: "3em", width: "auto"}} alt="E and J Gallo Winery logo"></img>
+            <img src={KLANDALogo} style={{height: "5.75em", width: "auto"}} alt="E and J Gallo Winery logo"></img>
+          </SponsorCard>
+          <SponsorCard cardNumber="06">
+            <img src={AOLogo} style={{height: "3.5em", width: "auto"}} alt="E and J Gallo Winery logo"></img>
           </SponsorCard>
         </div>
       </Container>

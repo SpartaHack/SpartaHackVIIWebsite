@@ -5,81 +5,140 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  height: 275vh;
 }
 
-
-@media (min-width: 768px) and (orientation: landscape) {
+@media (min-width: 576px) and (orientation: landscape) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 225;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 200vh;
+  }
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+  .auth-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+  .auth-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 115vh;
+  }
 }
 
-@media (min-width: 992px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+  }
 }
 
-@media (min-width: 992px) and (orientation: portrait) {
+@media (min-width: 922px) and (orientation: portrait) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 100vh;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 125vh;
+  }
 }
 
-@media (min-width: 1200px) and (orientation: landscape) {
+@media (min-width: 922px) and (orientation: landscape) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 115vh;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 150vh;
+  }
 }
 
 @media (min-width: 1200px) and (orientation: portrait) {
   .auth-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("./images/campus_bg\ .jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 115vh;
-    }
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 125vh;
+  }
 }
+
+@media (min-width: 1200px) and (orientation: landscape) {
+  .auth-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 125vh;
+  }
+}
+
+
+@media (min-width: 1400px) and (orientation: portrait) {
+  .auth-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 125vh;
+  }
+} 
+
+@media (min-width: 1400px) and (orientation: landscape) {
+  .auth-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("./images/campus_bg\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 125vh;
+  }
+}
+
+

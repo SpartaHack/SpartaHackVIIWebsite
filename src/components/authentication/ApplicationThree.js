@@ -19,13 +19,13 @@ import "./ApplicationThree.css";
 // Component responsible for the gathering of user info for invite and event purposes via an application
 
 export default function Application() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const { currentUser } = useAuth();
   const [error, setError] = useState("");
   let [isBlocking, setIsBlocking] = useState(true);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  const onSubmit = data => alert(JSON.stringify(data));
+
 
   async function userSubmit(data) {
     setIsBlocking(false);
@@ -73,7 +73,7 @@ export default function Application() {
                       SpartaHack 2022 Application <h5>Page 3 of 3</h5>
                     </h2>
                     {(errors.mlhCodeOfConductCheck || errors.mlhEventLogisticsInformationCheck) && <Alert variant="danger">Please check the required fields.</Alert>}
-                    {/* {error && <Alert variant="danger">{error}</Alert>} */}
+                    {error && <Alert variant="danger">{error}</Alert>} 
                     <Form onSubmit={handleSubmit(userSubmit)}>
                       <Form.Group
                         className="mb-3"

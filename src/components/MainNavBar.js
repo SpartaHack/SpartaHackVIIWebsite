@@ -51,7 +51,8 @@ const MainNavBar = () => {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <div className="MLHLogo-holder" style={{position: "absolute", right: "5%", top: "0px", width: "5%", height: "auto", zIndex: "1", opacity: '1'}}>
+          {/* style={{position: "absolute", right: "5%", top: "0px", width: "5%", height: "auto", zIndex: "1", opacity: '1'}} */}
+          <div className="MLHLogo-holder">
             <MLHLogo />
           </div>
         </Container>

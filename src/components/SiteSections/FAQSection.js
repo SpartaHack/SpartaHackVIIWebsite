@@ -41,7 +41,14 @@ export default function FAQSection() {
                   <Accordion.Body>
                     Anyone who is currently a student or has graduated within 12
                     months of Spartahack! Graduate students, undergrads, and
-                    high-school students from any field of study are welcome.
+                    high-school students from any field of study are welcome. At
+                    the event please adhere to the
+                    <span>
+                      <a href="https://static.mlh.io/docs/mlh-member-event-guidelines.pdf">
+                        MLH Code of Conduct
+                      </a>
+                      .
+                    </span>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -97,6 +104,15 @@ export default function FAQSection() {
                   <Accordion.Body>
                     "Send them our way at hello@Spartahack.com or come see us at
                     the Help Desk on the first floor during the event!"
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="8">
+                  <Accordion.Header>
+                    What is your COVID policy?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    Either a mask or proof of vaccination is required to be
+                    admitted.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

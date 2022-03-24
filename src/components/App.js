@@ -10,6 +10,8 @@ import Signup from "./authentication/Signup";
 import SubmittedApplicaiton from "./authentication/SubmittedApplication";
 import AccountUpdated from "./authentication/AccountUpdated";
 import Application from "./authentication/Application";
+import ApplicationTwo from "./authentication/ApplicationTwo";
+import ApplicationThree from "./authentication/ApplicationThree";
 import AppDashLoading from "./authentication/AppDashLoading";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
             component={SubmittedApplicaiton}
           />
           <PrivateRoute path="/application" component={Application} />
+          <PrivateRoute path="/applicationTwo" component={ApplicationTwo} />
+          <PrivateRoute path="/applicationThree" component={ApplicationThree} />
           <PrivateRoute path="/appdash-loading" component={AppDashLoading} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />

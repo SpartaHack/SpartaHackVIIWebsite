@@ -11,6 +11,8 @@ import SubmittedApplicaiton from "./authentication/SubmittedApplication";
 import AccountUpdated from "./authentication/AccountUpdated";
 import Application from "./authentication/Application";
 import AppDashLoading from "./authentication/AppDashLoading";
+import AdminLogin from "./admin/AdminLogin";
+import Dashboard from "./admin/Dashboard";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/admin" component={AdminLogin}/>
+          <Route path="/dashboard" component={Dashboard} />
         </AuthProvider>
       </Switch>
     </Router>

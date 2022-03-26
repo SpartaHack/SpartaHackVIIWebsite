@@ -1,0 +1,26 @@
+[debug] [2022-03-26T17:05:11.552Z] ----------------------------------------------------------------------
+[debug] [2022-03-26T17:05:11.553Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Gabriel Sotelo Justo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2022-03-26T17:05:11.554Z] CLI Version:   10.5.0
+[debug] [2022-03-26T17:05:11.554Z] Platform:      win32
+[debug] [2022-03-26T17:05:11.554Z] Node Version:  v16.14.0
+[debug] [2022-03-26T17:05:11.555Z] Time:          Sat Mar 26 2022 13:05:11 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-03-26T17:05:11.556Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-26T17:05:11.629Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-26T17:05:11.630Z] > authorizing via signed-in user (webmaster.spartahack@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Repositories\SpartaHackVIIWebsite
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+

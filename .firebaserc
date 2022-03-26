@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "spartahack-2022-production"
-  }
+    "default": "spartahack-2022-production",
+    "dev": "spartahack-2022-development"
+  },
+  "targets": {}
 }

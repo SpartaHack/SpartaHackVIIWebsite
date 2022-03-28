@@ -139,35 +139,36 @@ export default function Dashboard({ preLoadedValues, resumeOnFileOgName, resumeO
                   <Row>
                     <Col md = {4}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Name <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Label>First Name <span style={{color: "red"}}>*</span></Form.Label>
                         <Form.Control
                           type="text"
-                          name="applicantName"
+                          name="applicantFirstName"
                           placeholder="Ex. Jane Doe"
-                          {...register("applicantName")}
+                          {...register("applicantFirstName")}
                           required
                         />
                       </Form.Group>
                     </Col>
                     <Col md = {4}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Date of Birth <span style={{color: "red"}}>*</span></Form.Label>
-                        <Form.Control
-                          name="dateOfBirth"
-                          type="date"
-                          {...register("dateOfBirth")}
-                          required
-                        />
-                      </Form.Group>
-                    </Col>
-                    <Col md = {4}>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Education Level <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Label>Last Name <span style={{color: "red"}}>*</span></Form.Label>
                         <Form.Control
                           type="text"
-                          name="educationLevel"
+                          name="applicantLastName"
+                          placeholder="Ex. Jane Doe"
+                          {...register("applicantLastName")}
+                          required
+                        />
+                      </Form.Group>
+                    </Col>
+                    <Col md = {4}>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Country of Residence <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="countryOfResidence"
                           placeholder="Ex. Undergraduate"
-                          {...register("educationLevel")}
+                          {...register("countryOfResidence")}
                           required
                         />
                       </Form.Group>
@@ -176,11 +177,11 @@ export default function Dashboard({ preLoadedValues, resumeOnFileOgName, resumeO
                   <Row>
                     <Col md = {4}>
                       <Form.Group className="mb-3">
-                        <Form.Label>University <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Label>School <span style={{color: "red"}}>*</span></Form.Label>
                         <Form.Control
-                          {...register("university")}
+                          {...register("school")}
                           type="text"
-                          name="university"
+                          name="school"
                           placeholder="Ex. Michigan State University"
                           required
                         />
@@ -308,6 +309,35 @@ export default function Dashboard({ preLoadedValues, resumeOnFileOgName, resumeO
                           {...register("phone")}
                           type="text"
                           placeholder="Ex. 847-111-2222"
+                          required
+                        />
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md = {4}>
+    
+                    </Col>
+                    <Col md = {4}>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Date of Birth <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Control
+                          name="dateOfBirth"
+                          type="date"
+                          {...register("dateOfBirth")}
+                          required
+                        />
+                      </Form.Group>
+                    </Col>
+                    <Col md = {4}>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Education Level <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="levelOfStudy"
+                          placeholder="Ex. Undergraduate"
+                          {...register("levelOfStudy")}
                           required
                         />
                       </Form.Group>

@@ -95,6 +95,7 @@ export default function Dashboard(){
                 addToast("Error sending email to " + user.name, { appearance: 'error', autoDismiss: false});
             }
         }).catch(function(error) {
+            addToast("Error sending email to " + user.name, { appearance: 'error', autoDismiss: false});
             console.log(error);
         });
     }

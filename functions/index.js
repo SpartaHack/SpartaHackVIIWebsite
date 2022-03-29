@@ -46,8 +46,9 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         const mailOptions = {
             from: 'SpartaHack <hello@spartahack.com>',
             to: email,
+            bcc: 'soteloju@msu.edu',
             subject: 'Congratulations!',
-            html: {path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=b5c23e94-1d23-41ef-b3ab-b7b13c37e307'},
+            html: {path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=e263de5f-8ca6-439c-8b8c-5421aea86c70'},
             attachments: [{
               filename: 'image-1.png',
               path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fimages%2Fimage-1.png?alt=media&token=ca9a211f-9292-4a05-bae0-33b598fe291d',
@@ -71,7 +72,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
             {
               filename: 'image-6.png',
               path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fimages%2Fimage-6.png?alt=media&token=13394a7e-3aac-414a-b9b8-301d5e7f8f1a',
-              cid: 'image-6'
+              cid: 'image-4'
             }],
             replyTo: 'hello@spartahack.com'
         };

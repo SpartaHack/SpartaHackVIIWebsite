@@ -1,6 +1,5 @@
 import { Card, Table, Container, Button, Modal } from "react-bootstrap";
 import AuthBackground from "../AuthBackground"
-import CenteredContainer from "../authentication/CenteredContainer";
 import { db } from "../../firebase";
 import {collection, getDocs} from "firebase/firestore";
 import { useState, useEffect } from "react";
@@ -33,31 +32,6 @@ class User {
     
     toString() {
         return this.name + ", " + this.birthday + ", " + this.education + ", " + this.uni;
-    }
-}
-
-const userConverter = {
-    toFirestore: (user) => {
-        return {
-            applicantName: user.name,
-            dateOfBirth: user.birthday,
-            educationLevel: user.education,
-            expectedGradDate: user.graddate,
-            gender: user.gender,
-            hackathonsAttended: user.hackathons,
-            linkedin: user.linkedin,
-            major: user.major,
-            phone: user.phone,
-            statement: user.statement,
-            travelOrigin: user.origin,
-            university: user.uni
-        };
-    },
-    fromFirestore: (snapshot) => {
-        const data = snapshot.data();
-        return new User(data.applicantName, data.dateOfBirth, data.educationLevel, data.expectedGradDate, 
-                    data.gender, data.hackathonsAttended, data.linkedin, data.major, 
-                    data.phone, data.race, data.statement, data.travelOrigin, data.university);
     }
 }
 
@@ -115,7 +89,7 @@ export default function Dashboard(){
             "message": "Surprisingly, this seems to be working."
         }).then(function(result) {
             console.log(result);
-            if (result.data.status == 200){
+            if (result.data.status === 200){
                 addToast("Email sent successfully to " + user.name, { appearance: 'success', autoDismiss: false});
             } else{
                 addToast("Error sending email to " + user.name, { appearance: 'error', autoDismiss: false});

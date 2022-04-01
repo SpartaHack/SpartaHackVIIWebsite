@@ -9,6 +9,7 @@ import TwilloQuestLogo from "../images/Logos/twillo_quest_logo.png"
 import MSUFCULogo from "../images/Logos/MSUFCU_LOGO.png"
 import KLANDALogo from "../images/Logos/KL&A_LOGO.png"
 import AOLogo from "../images/Logos/AO_LOGO.svg"
+import StellantisLogo from "../images/Logos/Logo_Stellantis_Neg_RGB.png"
 
 
 export default function SponsorsSection() {
@@ -41,10 +42,13 @@ export default function SponsorsSection() {
             <img src={MSUFCULogo} style={{height: "6em", width: "auto"}} alt="MSUFCU logo"></img>
           </SponsorCard>
           <SponsorCard cardNumber="06">
-            <img src={KLANDALogo} style={{height: "5.75em", width: "auto"}} alt="E and J Gallo Winery logo"></img>
+            <img src={KLANDALogo} style={{height: "5.75em", width: "auto"}} alt="KL AND A logo"></img>
           </SponsorCard>
-          <SponsorCard cardNumber="06">
-            <img src={AOLogo} style={{height: "3.5em", width: "auto"}} alt="E and J Gallo Winery logo"></img>
+          <SponsorCard cardNumber="07">
+            <img src={AOLogo} style={{height: "3.5em", width: "auto"}} alt="Auto Owners logo"></img>
+          </SponsorCard>
+          <SponsorCard cardNumber="08">
+            <img src={StellantisLogo} style={{height: "5.5em", width: "auto"}} alt="StellantisLogo"></img>
           </SponsorCard>
         </div>
       </Container>

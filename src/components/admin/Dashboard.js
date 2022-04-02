@@ -11,7 +11,7 @@ const sendEmail = httpsCallable(functions, "sendEmail");
 
 class User {
     // constructor with name, birthday, education, graddate
-    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, id) {
+    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, id) {
         this.name = name;
         this.birthday = birthday;
         this.education = education;
@@ -27,6 +27,7 @@ class User {
         this.origin = origin;
         this.country = country;
         this.approved = approved;
+        this.rejected = rejected;
         this.id = id;
     }
     
@@ -69,8 +70,9 @@ export default function Dashboard(){
                 const origin = doc.data().travelOrigin;
                 const country = doc.data().countryOfResidence;
                 const approved = doc.data().approved ? doc.data().approved : false;
+                const rejected = doc.data().rejected ? doc.data().rejected : false;
                 const id = doc.id;
-                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, id);
+                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, id);
                 users.push(new_user);
             })
             setUsers(users);
@@ -80,13 +82,14 @@ export default function Dashboard(){
 
     const { addToast } = useToasts();
 
-    const triggerEmail = (user) => {
+    const triggerEmail = (user, approval) => {
 
         console.log("hello")
         sendEmail({
             "id": user.id,
             "name": user.name,
-            "message": "Surprisingly, this seems to be working."
+            "message": "Surprisingly, this seems to be working.",
+            "approval": approval
         }).then(function(result) {
             console.log(result);
             if (result.data.status === 200){
@@ -155,12 +158,14 @@ export default function Dashboard(){
                             <Button variant="secondary" onClick={() => setShow(false)}>
                                 Close
                             </Button>
-                            <Button variant="success" onClick={() => triggerEmail(curUser)} disabled={curUser.approved}>
-                                {curUser.approved ? "Already Approved" : "Approve"}
-                            </Button>
+                            {!curUser.rejected &&
+                                <Button variant="success" onClick={() => triggerEmail(curUser, true)} disabled={curUser.approved}>
+                                    {curUser.approved ? "Already Approved" : "Approve"}
+                                </Button>
+                            }
                             {!curUser.approved && 
-                                <Button variant="danger" disabled={true}>
-                                    Reject
+                                <Button variant="danger" onClick={() => triggerEmail(curUser, false)} disabled={curUser.rejected}>
+                                    {curUser.rejected ? "User Rejected" : "Reject"}
                                 </Button>
                             }
                         </Modal.Footer>
@@ -192,12 +197,14 @@ export default function Dashboard(){
                                                 <Button variant="primary" onClick={() => showModal(user)}>View</Button>
                                             </td>
                                             <td>
-                                                <Button variant="success" onClick={() => triggerEmail(user)} disabled={user.approved}>
-                                                    {user.approved ? "Already Approved" : "Approve"}
-                                                </Button>
+                                                {!user.rejected &&
+                                                    <Button variant="success" onClick={() => triggerEmail(user, true)} disabled={user.approved}>
+                                                        {user.approved ? "User Approved" : "Approve"}
+                                                    </Button>
+                                                }
                                                 {!user.approved && 
-                                                    <Button variant="danger" disabled={true}>
-                                                        Reject
+                                                    <Button variant="danger" onClick={() => triggerEmail(user, false)} disabled={user.rejected}>
+                                                        {user.rejected ? "User Rejected" : "Reject"}
                                                     </Button>
                                                 }
                                             </td>

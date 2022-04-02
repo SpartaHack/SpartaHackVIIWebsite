@@ -13,6 +13,9 @@ admin.initializeApp(functions.config().firebase);
 //when this cloud function is already deployed, change the origin to 'https://your-deployed-app-url
 const cors = require('cors')({ origin: true });
 
+const approvalPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=50026b7c-3305-4626-8422-abc84f654e1e';
+const rejectionPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Freject.html?alt=media&token=b8b9da35-a17f-4f4b-9785-2f6881a95e8a';
+
 //create and config transporter
 let transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -34,6 +37,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
     //get contact form data from the req and then assigned it to variables
     const id = req.body.data.id;
+    const approval = req.body.data.approval;
     const name = req.body.data.name;
     const message = req.body.data.message;
 
@@ -47,8 +51,8 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
             from: 'SpartaHack <hello@spartahack.com>',
             to: email,
             bcc: 'soteloju@msu.edu',
-            subject: 'Congratulations!',
-            html: {path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=e263de5f-8ca6-439c-8b8c-5421aea86c70'},
+            subject: approval ? 'Congratulations!' : 'About SpartaHack',
+            html: {path: approval ? approvalPath : rejectionPath},
             attachments: [{
               filename: 'image-1.png',
               path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fimages%2Fimage-1.png?alt=media&token=ca9a211f-9292-4a05-bae0-33b598fe291d',
@@ -90,7 +94,8 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
           
           // change the approved field in user
           admin.firestore().collection('users').doc(id).update({
-              approved: true
+              approved: approval,
+              rejected: !approval
           });
           return res.status(200).send({
               data: {

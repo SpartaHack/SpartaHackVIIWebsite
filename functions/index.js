@@ -48,11 +48,12 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         console.log(email);
         //config the email message
         const mailOptions = {
-            from: 'SpartaHack <hello@spartahack.com>',
+            from: functions.config().gmail.email,
             to: email,
             bcc: 'soteloju@msu.edu',
             subject: approval ? 'Congratulations!' : 'About SpartaHack',
             html: {path: approval ? approvalPath : rejectionPath},
+            //text: {path: approval ? approvalPath : rejectionPath},
             attachments: [{
               filename: 'image-1.png',
               path: 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fimages%2Fimage-1.png?alt=media&token=ca9a211f-9292-4a05-bae0-33b598fe291d',

@@ -1,7 +1,7 @@
-import { Card, Table, Container, Button, Modal } from "react-bootstrap";
+import { Card, Table, Container, Button, Modal, FormControl } from "react-bootstrap";
 import AuthBackground from "../AuthBackground"
 import { db } from "../../firebase";
-import {collection, getDocs} from "firebase/firestore";
+import {collection, doc, getDocs, updateDoc} from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { getFunctions, httpsCallable } from "firebase/functions";
 import { useToasts } from "react-toast-notifications";
@@ -11,7 +11,7 @@ const sendEmail = httpsCallable(functions, "sendEmail");
 
 class User {
     // constructor with name, birthday, education, graddate
-    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, id) {
+    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, id) {
         this.name = name;
         this.birthday = birthday;
         this.education = education;
@@ -28,6 +28,7 @@ class User {
         this.country = country;
         this.approved = approved;
         this.rejected = rejected;
+        this.checked = checked;
         this.id = id;
     }
     
@@ -40,6 +41,7 @@ export default function Dashboard(){
     const [Users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
     const [curUser, setCurUser] = useState(new User());
+    const [permanentUsers, setPermanentUsers] = useState([]);
 
     useEffect(() => {
         async function fetchData(){
@@ -71,11 +73,13 @@ export default function Dashboard(){
                 const country = doc.data().countryOfResidence;
                 const approved = doc.data().approved ? doc.data().approved : false;
                 const rejected = doc.data().rejected ? doc.data().rejected : false;
+                const checked = doc.data().checked ? doc.data().checked : false;
                 const id = doc.id;
-                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, id);
+                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, id);
                 users.push(new_user);
             })
             setUsers(users);
+            setPermanentUsers(users);
         }
         fetchData();
     }, []);
@@ -83,7 +87,6 @@ export default function Dashboard(){
     const { addToast } = useToasts();
 
     const triggerEmail = (user, approval) => {
-
         console.log("hello")
         sendEmail({
             "id": user.id,
@@ -106,6 +109,25 @@ export default function Dashboard(){
     const showModal = (user) => {
         setCurUser(user);
         setShow(true);
+    }
+
+    const checkIn = (user) => {
+        updateDoc(doc(db, "users", user.id), {
+            "checked": true
+        });
+        addToast("Checked in " + user.name, { appearance: 'info', autoDismiss: false});
+    }
+
+    // show only rows where user name matches search
+    const search = (searchTerm) => {
+        if (searchTerm === ""){
+            setUsers(permanentUsers);
+        } else {
+            const filteredUsers = permanentUsers.filter((user) => {
+                return user.name.toLowerCase().includes(searchTerm.toLowerCase());
+            });
+            setUsers(filteredUsers);
+        }
     }
 
     return (
@@ -172,6 +194,7 @@ export default function Dashboard(){
                     </Modal>
                     <Card>
                         <h1>Admin Panel</h1>
+                        <FormControl className="search-bar" onChange={(e) => search(e.target.value)} placeholder="Search by name"/>
                         <Table responsive>
                             <thead>
                                 <tr>
@@ -181,6 +204,7 @@ export default function Dashboard(){
                                     <th>Education</th>
                                     <th>University</th>
                                     <th>Full Profile</th>
+                                    <th></th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -207,6 +231,11 @@ export default function Dashboard(){
                                                         {user.rejected ? "User Rejected" : "Reject"}
                                                     </Button>
                                                 }
+                                            </td>
+                                            <td>
+                                                <Button variant="info" onClick={() => checkIn(user)} disabled={user.checked}>
+                                                    {user.checked ? "Checked In" : "Check In"}
+                                                </Button>
                                             </td>
                                         </tr>
                                     )

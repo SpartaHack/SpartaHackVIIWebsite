@@ -111,8 +111,23 @@ export default function FAQSection() {
                     What is your COVID policy?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Either a mask or proof of vaccination is required to be
-                    admitted.
+                    Masks are required as per guidance of Major League Hacking.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="9">
+                  <Accordion.Header>
+                    How do I get admitted?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    Be a student or recent graduate.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="10">
+                  <Accordion.Header>
+                    How do I check-in?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    If registered prior to the event, you will receive a unique QR code via email by Wednesday April 6th to scan upon check-in at Wells Hall.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

@@ -14,6 +14,7 @@ import ApplicationTwo from "./authentication/ApplicationTwo";
 import ApplicationThree from "./authentication/ApplicationThree";
 import AppDashLoading from "./authentication/AppDashLoading";
 import Dashboard from "./admin/Dashboard";
+import Maps from "./pages/Maps"
 import {ToastProvider} from "react-toast-notifications";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/forgot-password" component={ForgotPassword} />
             <Route path="/admin" component={Dashboard} />
+            <Route path="/maps" component={Maps} />
           </AuthProvider>
         </Switch>
       </Router>

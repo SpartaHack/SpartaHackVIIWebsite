@@ -12,42 +12,51 @@ const MainNavBar = () => {
 
   return (
     <div>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-      >
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container className="nav-inner-containter">
-          <Navbar.Brand href="#home" onClick={directHome} style={{fontFamily : "Montserrat"}}> 
+          <Navbar.Brand
+            href="#home"
+            onClick={directHome}
+            style={{ fontFamily: "Montserrat" }}
+          >
             SPARTAHACK VII
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#About" style={{fontFamily : "Montserrat"}}>About</Nav.Link>
-              <Nav.Link style={{fontFamily : "Montserrat"}}>
+              <Nav.Link href="#About" style={{ fontFamily: "Montserrat" }}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#Schedule" style={{ fontFamily: "Montserrat" }}>
                 {/* <Link to="Schedule" duration={500}>
                   {" "}
                   Schedule
                 </Link> */}
                 Schedule
               </Nav.Link>
-              <Nav.Link style={{fontFamily : "Montserrat"}}>
+              <Nav.Link href="#FAQ" style={{ fontFamily: "Montserrat" }}>
                 {" "}
                 {/* <Link to="FAQ" duration={500}>
                   {" "}
                   FAQ
                 </Link> */}
                 FAQ
-              </Nav.Link >
-              <Nav.Link href="#Sponsors" style={{fontFamily : "Montserrat"}}>
+              </Nav.Link>
+              <Nav.Link href="#Sponsors" style={{ fontFamily: "Montserrat" }}>
                 {" "}
                 {/* <Link to="Sponsors" duration={500}>
                   {" "}
                   Sponsors
                 </Link> */}
                 Sponsors
+              </Nav.Link>
+              <Nav.Link href="maps" style={{ fontFamily: "Montserrat" }}>
+                {" "}
+                {/* <Link to="Sponsors" duration={500}>
+                  {" "}
+                  Sponsors
+                </Link> */}
+                Maps
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -57,7 +66,6 @@ const MainNavBar = () => {
           </div>
         </Container>
       </Navbar>
-
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .schedule-card-dots-holder {
-  width: 300px;
+  width: 350px;
   height: 475px;
   position: relative;
   top: 10%;
@@ -16,16 +16,7 @@
   .schedule-card-dots-holder {
     width: 375px;
     height: 500px;
-    /* outline: 5px solid red; */
     position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
   }
 }
 
@@ -33,97 +24,41 @@
   .schedule-card-dots-holder {
     width: 375px;
     height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
   }
 }
 
 @media (min-width: 576px) and (orientation: landscape) {
   .schedule-card-dots-holder {
-    width: 375px;
-    height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 575px;
+    height: 625px;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   .schedule-card-dots-holder {
-    width: 300px;
-    height: 475px;
-    position: relative;
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 500px;
+    height: 575px;
   }
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
   .schedule-card-dots-holder {
-    width: 300px;
-    height: 475px;
-    position: relative;
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 475px;
+    height: 550px;
   }
 }
 
 @media (min-width: 922px) and (orientation: portrait) {
   .schedule-card-dots-holder {
-    width: 375px;
-    height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 575px;
+    height: 600px;
   }
 }
 
 @media (min-width: 922px) and (orientation: landscape) {
   .schedule-card-dots-holder {
-    width: 375px;
-    height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 475px;
+    height: 550px;
   }
 }
 
@@ -131,33 +66,13 @@
   .schedule-card-dots-holder {
     width: 375px;
     height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
   }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
   .schedule-card-dots-holder {
-    width: 375px;
-    height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 525px;
+    height: 575px;
   }
 }
 
@@ -166,33 +81,13 @@
   .schedule-card-dots-holder {
     width: 375px;
     height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
   }
 }
 
 @media (min-width: 1400px) and (orientation: landscape) {
   .schedule-card-dots-holder {
-    width: 375px;
-    height: 500px;
-    /* outline: 5px solid red; */
-    position: relative;
-    /* left: 10%; */
-    top: 10%;
-    background-image: radial-gradient(
-      circle at 5px 5px,
-      #717171 2px,
-      transparent 0
-    );
-    background-size: 25px 25px;
+    width: 575px;
+    height: 650px;
   }
 }
 
@@ -202,8 +97,8 @@
     top: 50%;
     left: 48%;
     transform: translate(-50%, -50%);
-    width: 232px;
-    height: 375px;
+    width: 300px;
+    height: 400px;
     background-color: black;
     opacity: 0.8;
     border-radius: 10px;
@@ -212,148 +107,81 @@
 
   @media (max-width: 576px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
       width: 300px;
       height: 400px;
-      background-color: black;
-      opacity: 0.8;
     }
   }
 
   @media (min-width: 576px) and (orientation: portrait) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
       width: 300px;
       height: 400px;
-      background-color: black;
-      opacity: 0.8;
     }
   }
   
   @media (min-width: 576px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 400px;
-      background-color: black;
-      opacity: 0.8;
+      width: 475px;
+      height: 525px;
     }
   }
   
   @media (min-width: 768px) and (orientation: portrait) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 232px;
-      height: 375px;
-      background-color: black;
-      opacity: 0.8;
-      border-radius: 10px;
+      width: 400px;
+      height: 460px;
+
     }
   }
   
   @media (min-width: 768px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 232px;
-      height: 375px;
-      background-color: black;
-      opacity: 0.8;
-      border-radius: 10px;
+      width: 400px;
+      height: 460px;
     }
     
   }
 
   @media (min-width: 922px) and (orientation: portrait) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 400px;
-      background-color: black;
-      opacity: 0.8;
+      width: 500px;
+      height: 525px;
     }
   }
   
   @media (min-width: 922px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 400px;
-      background-color: black;
-      opacity: 0.8;
+      width: 400px;
+      height: 460px;
     }
   }
 
   @media (min-width: 1200px) and (orientation: portrait) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
       width: 300px;
       height: 400px;
-      background-color: black;
-      opacity: 0.8;
     }
   }
   
   @media (min-width: 1200px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 400px;
-      background-color: black;
-      opacity: 0.8;
+      width: 475px;
+      height: 500px;
     }
   }
   
 
   @media (min-width: 1400px) and (orientation: portrait) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
       width: 300px;
       height: 400px;
-      background-color: black;
-      opacity: 0.8;
     }
   }
   
   @media (min-width: 1400px) and (orientation: landscape) {
     .schedule-dark-overlay {
-      position: absolute;
-      top: 50%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 400px;
-      background-color: black;
-      opacity: 0.8;
+      width: 475px;
+      height: 525px;
     }
   }
   
@@ -437,7 +265,7 @@
   
   .schedule-dark-overlay-slot {
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 0.77rem;
     color: white;
   }
 
@@ -481,7 +309,7 @@
   
   @media (min-width: 922px) and (orientation: landscape) {
     .schedule-dark-overlay-slot {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 

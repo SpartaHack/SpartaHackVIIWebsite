@@ -10,7 +10,8 @@ const ScheduleCard = (props) => {
           <p className="schedule-dark-overlay-date mx-auto"> {props.date} </p>
           <p className="schedule-dark-overlay-slot mx-auto">
             {" "}
-            {props.eventOne}{" "}
+            {props.eventOne}
+            {" "}
           </p>
           <p className="schedule-dark-overlay-slot mx-auto">
             {" "}
@@ -35,6 +36,18 @@ const ScheduleCard = (props) => {
           <p className="schedule-dark-overlay-slot mx-auto">
             {" "}
             {props.eventSeven}
+          </p>
+          <p className="schedule-dark-overlay-slot mx-auto">
+            {" "}
+            {props.eventEight}
+          </p>
+          <p className="schedule-dark-overlay-slot mx-auto">
+            {" "}
+            {props.eventNine}
+          </p>
+          <p className="schedule-dark-overlay-slot mx-auto">
+            {" "}
+            {props.eventTen}
           </p>
           <div className="schedule-dark-overlay-line-accent ms-auto"></div>
         </Stack>

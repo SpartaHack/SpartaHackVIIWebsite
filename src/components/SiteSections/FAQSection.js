@@ -130,6 +130,17 @@ export default function FAQSection() {
                     If registered prior to the event, you will receive a unique QR code via email by Wednesday April 6th to scan upon check-in at Wells Hall.
                   </Accordion.Body>
                 </Accordion.Item>
+                <Accordion.Item eventKey="11">
+                  <Accordion.Header>
+                    Could you reimburse my travel expenses?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    You are eligible for the amount of travel reimbursement indicated in our travel policy if and only if:
+                      (1) you and anyone with whom you are carpooling have RSVPed and
+                      (2) you follow all of the steps in our <a href="https://docs.google.com/document/d/13bCbIENhAkfRP8VbwvKzkBssnQrnNGMui6j-LftryAo/edit">travel policy</a>.
+                    If you are flying, you are subject to the same rules as above.
+                  </Accordion.Body>
+                </Accordion.Item>
               </Accordion>
             </Col>
             <Col></Col>

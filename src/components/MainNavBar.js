@@ -34,6 +34,14 @@ const MainNavBar = () => {
                 </Link> */}
                 Schedule
               </Nav.Link>
+              <Nav.Link href="#Maps" style={{ fontFamily: "Montserrat" }}>
+                {" "}
+                {/* <Link to="Sponsors" duration={500}>
+                  {" "}
+                  Sponsors
+                </Link> */}
+                Maps
+              </Nav.Link>
               <Nav.Link href="#FAQ" style={{ fontFamily: "Montserrat" }}>
                 {" "}
                 {/* <Link to="FAQ" duration={500}>
@@ -49,14 +57,6 @@ const MainNavBar = () => {
                   Sponsors
                 </Link> */}
                 Sponsors
-              </Nav.Link>
-              <Nav.Link href="maps" style={{ fontFamily: "Montserrat" }}>
-                {" "}
-                {/* <Link to="Sponsors" duration={500}>
-                  {" "}
-                  Sponsors
-                </Link> */}
-                Maps
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

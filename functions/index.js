@@ -13,7 +13,7 @@ admin.initializeApp(functions.config().firebase);
 //when this cloud function is already deployed, change the origin to 'https://your-deployed-app-url
 const cors = require('cors')({ origin: true });
 
-const approvalPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=50026b7c-3305-4626-8422-abc84f654e1e';
+//const approvalPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=50026b7c-3305-4626-8422-abc84f654e1e';
 const rejectionPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Freject.html?alt=media&token=b8b9da35-a17f-4f4b-9785-2f6881a95e8a';
 const confirmationPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fconfirmation.html?alt=media&token=3bf241ec-6a02-4373-8051-337c603ff48d';
 

@@ -15,9 +15,12 @@ import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import AuthBackground from "../AuthBackground";
 import "./ApplicationThree.css";
+import { getFunctions, httpsCallable } from "firebase/functions";
+
+const functions = getFunctions();
+const sendEmail = httpsCallable(functions, "sendEmail");
 
 // Component responsible for the gathering of user info for invite and event purposes via an application
-
 export default function Application() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { currentUser } = useAuth();
@@ -39,6 +42,12 @@ export default function Application() {
     } catch {
       setError("Application failed to send!");
     }
+    sendEmail({
+        "id": currentUser.uid,
+        "name": "",
+        "message": "Email Sent",
+        "approval": true
+    });
     setLoading(false);
   }
 

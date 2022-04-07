@@ -31,7 +31,7 @@ export default function SubmittedApplicaiton() {
           <Card.Body>
             <h2 className="text-center mb-4"> Application Submitted! </h2>
             <Alert variant="success">
-              "Be on the lookout for email approval."
+              Check your inbox for an email from us with more information. All in-event information will be shared via Discord, make sure you join our <a href="https://discord.com/invite/sjhS6RmVgS">server</a>!
             </Alert>
             {error && <Alert variant="danger">{error}</Alert>}
             <Button

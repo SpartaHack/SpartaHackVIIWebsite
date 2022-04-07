@@ -15,6 +15,7 @@ const cors = require('cors')({ origin: true });
 
 const approvalPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Findex.html?alt=media&token=50026b7c-3305-4626-8422-abc84f654e1e';
 const rejectionPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Freject.html?alt=media&token=b8b9da35-a17f-4f4b-9785-2f6881a95e8a';
+const confirmationPath = 'https://firebasestorage.googleapis.com/v0/b/spartahack-2022-production.appspot.com/o/templates%2Fconfirmation.html?alt=media&token=3bf241ec-6a02-4373-8051-337c603ff48d';
 
 //create and config transporter
 let transporter = nodemailer.createTransport({
@@ -51,8 +52,8 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
             from: functions.config().gmail.email,
             to: email,
             bcc: 'soteloju@msu.edu',
-            subject: approval ? 'Congratulations!' : 'About SpartaHack',
-            html: {path: approval ? approvalPath : rejectionPath},
+            subject: approval ? 'SpartaHack Tomorrow' : 'About SpartaHack',
+            html: {path: approval ? confirmationPath : rejectionPath},
             //text: {path: approval ? approvalPath : rejectionPath},
             attachments: [{
               filename: 'image-1.png',
@@ -96,7 +97,8 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
           // change the approved field in user
           admin.firestore().collection('users').doc(id).update({
               approved: approval,
-              rejected: !approval
+              rejected: !approval,
+              confirmationEmail: true
           });
           return res.status(200).send({
               data: {
@@ -110,3 +112,5 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     });
   });
 });
+
+            

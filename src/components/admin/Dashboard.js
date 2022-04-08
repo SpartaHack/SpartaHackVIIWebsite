@@ -11,7 +11,7 @@ const sendEmail = httpsCallable(functions, "sendEmail");
 
 class User {
     // constructor with name, birthday, education, graddate
-    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, id) {
+    constructor(name, birthday, education, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, confirmationEmail, id) {
         this.name = name;
         this.birthday = birthday;
         this.education = education;
@@ -29,6 +29,7 @@ class User {
         this.approved = approved;
         this.rejected = rejected;
         this.checked = checked;
+        this.confirmationEmail = confirmationEmail;
         this.id = id;
     }
     
@@ -74,8 +75,9 @@ export default function Dashboard(){
                 const approved = doc.data().approved ? doc.data().approved : false;
                 const rejected = doc.data().rejected ? doc.data().rejected : false;
                 const checked = doc.data().checked ? doc.data().checked : false;
+                const confirmationEmail = doc.data().confirmationEmail ? doc.data().confirmationEmail : false;
                 const id = doc.id;
-                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, id);
+                const new_user = new User(name, dateOfBirth, educationLevel, university, graddate, gender, hackathons, linkedin, major, phone, race, statement, origin, country, approved, rejected, checked, confirmationEmail, id);
                 users.push(new_user);
             })
             setUsers(users);
@@ -86,7 +88,7 @@ export default function Dashboard(){
 
     const { addToast } = useToasts();
 
-    const triggerEmail = (user, approval) => {
+    const triggerEmail = (e, user, approval) => {
         console.log("hello")
         sendEmail({
             "id": user.id,
@@ -104,6 +106,7 @@ export default function Dashboard(){
             addToast("Error sending email to " + user.name, { appearance: 'error', autoDismiss: false});
             console.log(error);
         });
+        e.currentTarget.disabled = true;
     }
 
     const showModal = (user) => {
@@ -111,11 +114,12 @@ export default function Dashboard(){
         setShow(true);
     }
 
-    const checkIn = (user) => {
+    const checkIn = (e, user) => {
         updateDoc(doc(db, "users", user.id), {
             "checked": true
         });
         addToast("Checked in " + user.name, { appearance: 'info', autoDismiss: false});
+        e.currentTarget.disabled = true;
     }
 
     // show only rows where user name matches search
@@ -181,12 +185,12 @@ export default function Dashboard(){
                                 Close
                             </Button>
                             {!curUser.rejected &&
-                                <Button variant="success" onClick={() => triggerEmail(curUser, true)} disabled={curUser.approved}>
+                                <Button variant="success" onClick={(e) => triggerEmail(e, curUser, true)} disabled={curUser.approved}>
                                     {curUser.approved ? "Already Approved" : "Approve"}
                                 </Button>
                             }
                             {!curUser.approved && 
-                                <Button variant="danger" onClick={() => triggerEmail(curUser, false)} disabled={curUser.rejected}>
+                                <Button variant="danger" onClick={(e) => triggerEmail(e, curUser, false)} disabled={curUser.rejected}>
                                     {curUser.rejected ? "User Rejected" : "Reject"}
                                 </Button>
                             }
@@ -200,6 +204,7 @@ export default function Dashboard(){
                                 <tr>
                                     <th></th>
                                     <th>Name</th>
+                                    <th>Minor</th>
                                     <th>Birthday</th>
                                     <th>Education</th>
                                     <th>University</th>
@@ -215,6 +220,7 @@ export default function Dashboard(){
                                             <td>{Users.indexOf(user) + 1}</td>
                                             <td>{user.name}</td>
                                             <td>{user.birthday}</td>
+                                            <td>{user.birthday}</td>
                                             <td>{user.education}</td>
                                             <td>{user.uni}</td>
                                             <td>
@@ -222,20 +228,22 @@ export default function Dashboard(){
                                             </td>
                                             <td>
                                                 {!user.rejected &&
-                                                    <Button variant="success" onClick={() => triggerEmail(user, true)} disabled={user.approved}>
+                                                    <Button variant="success" onClick={(e) => triggerEmail(e, user, true)} disabled={user.approved}>
                                                         {user.approved ? "User Approved" : "Approve"}
                                                     </Button>
                                                 }
                                                 {!user.approved && 
-                                                    <Button variant="danger" onClick={() => triggerEmail(user, false)} disabled={user.rejected}>
+                                                    <Button variant="danger" onClick={(e) => triggerEmail(e, user, false)} disabled={user.rejected}>
                                                         {user.rejected ? "User Rejected" : "Reject"}
                                                     </Button>
                                                 }
                                             </td>
                                             <td>
-                                                <Button variant="info" onClick={() => checkIn(user)} disabled={user.checked}>
-                                                    {user.checked ? "Checked In" : "Check In"}
-                                                </Button>
+                                                {!user.rejected &&
+                                                    <Button variant="info" onClick={(e) => checkIn(e, user)} disabled={user.checked}>
+                                                        {user.checked ? "Checked" : "Check In"}
+                                                    </Button>
+                                                }
                                             </td>
                                         </tr>
                                     )

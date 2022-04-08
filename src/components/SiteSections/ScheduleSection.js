@@ -62,25 +62,25 @@ const ScheduleSection = () => {
             eventTwo="12:30-1:00AM | Midnight Snack | Hacker Lounge"
             eventThree="1:00AM | Nap Rooms Open | 3rd floor A Wing"
             eventFour="1-2AM | Google Cloud Platform | B117"
-            eventFive="2-3AM | Tech Talk | B117"
+            eventFive="2-3AM | Steven Kneiser Tech Talk | B117"
             eventSix="3-5AM | Shrek 1 | B119"
             eventSeven="7-9AM | Breakfast | A120"
-            eventEight="10-11AM | Tech Talk | B119"
-            eventNine="11-12PM | Tech Talk | B117"
-            eventTen="12-1PM | MSUFCU Lunch | B Atrium"
+            eventEight="10-11AM | Jun Wang Tech Talk | B119"
+            eventNine="12-1PM | Lunch by ASMSU & MSUFCU | B Atrium"
+            eventTen=""
           />
           <ScheduleCard
             date="Apr 9th (Part 2)"
             eventOne="1-2PM | SpartaSoft Talk | B119"
             eventTwo="2-3PM | Web Apps Talk (KL&A) | B117"
-            eventThree="3-4PM | Tech Talk | B119"
-            eventFour="4:30-5:30PM | Fatima Taj Talk | B117"
-            eventFive="6-7PM | Dinner by Ford | B Atrium"
-            eventSix="7-9PM | Meditation Room | B106"
-            eventSeven="8-9PM | MLH CUP Stacking | B100"
-            eventEight="9-10PM | Smash Bros Tourny | A122"
-            eventNine="10:30-11:30PM | Chess Tourney  | A122"
-            eventTen="11:30 PM -1AM | Shrek 2 | B119"
+            eventThree="4:30-5:30PM | Fatima Taj Talk | B117"
+            eventFour="6-7PM | Dinner by Ford | B Atrium"
+            eventFive="7-9PM | Meditation Room | B106"
+            eventSix="8-9PM | MLH CUP Stacking | B100"
+            eventSeven="9-10PM | Smash Bros Tourny | A122"
+            eventEight="10:30-11:30PM | Chess Tourney  | A122"
+            eventNine="11:30 PM -1AM | Shrek 2 | B119"
+            eventTen=""
           />
           <ScheduleCard
             date="Apr 10th"
@@ -93,7 +93,7 @@ const ScheduleSection = () => {
             eventSeven="12:45PM | Judging Assignments | B100"
             eventEight="1-3:30PM | Hack Expo | B Hallway & Atrium"
             eventNine="4-5:30PM | Closing Ceremony | B115"
-            eventTen="7-9PM | Shrek 2 | B106"
+            eventTen=""
           />
         </div>
       </Container>

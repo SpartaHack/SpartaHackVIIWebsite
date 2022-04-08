@@ -24,9 +24,9 @@ const MainNavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#About" style={{ fontFamily: "Montserrat" }}>
+              {/* <Nav.Link href="#About" style={{ fontFamily: "Montserrat" }}>
                 About
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link href="#Schedule" style={{ fontFamily: "Montserrat" }}>
                 {/* <Link to="Schedule" duration={500}>
                   {" "}

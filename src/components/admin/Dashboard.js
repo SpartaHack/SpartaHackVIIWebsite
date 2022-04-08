@@ -1,4 +1,4 @@
-import { Card, Table, Container, Button, Modal, FormControl } from "react-bootstrap";
+import { Card, Table, Container, Button, Modal, FormControl, Badge } from "react-bootstrap";
 import AuthBackground from "../AuthBackground"
 import { db } from "../../firebase";
 import {collection, doc, getDocs, updateDoc} from "firebase/firestore";
@@ -204,7 +204,7 @@ export default function Dashboard(){
                                 <tr>
                                     <th></th>
                                     <th>Name</th>
-                                    <th>Minor</th>
+                                    <th></th>
                                     <th>Birthday</th>
                                     <th>Education</th>
                                     <th>University</th>
@@ -219,7 +219,14 @@ export default function Dashboard(){
                                         <tr>
                                             <td>{Users.indexOf(user) + 1}</td>
                                             <td>{user.name}</td>
-                                            <td>{user.birthday}</td>
+                                            <td>
+                                                {
+                                                    // use full days to determine if user is less than 18 years old
+                                                    (new Date().getTime() - new Date(user.birthday).getTime()) / (1000 * 3600 * 24) < 18 * 365
+                                                    ? <Badge bg="danger">Minor</Badge>
+                                                    : <Badge bg="secondary">Adult</Badge>
+                                                }
+                                            </td>
                                             <td>{user.birthday}</td>
                                             <td>{user.education}</td>
                                             <td>{user.uni}</td>

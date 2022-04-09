@@ -62,7 +62,7 @@ const ScheduleSection = () => {
             eventTwo="12:30-1:00AM | Midnight Snack | Hacker Lounge"
             eventThree="1:00AM | Nap Rooms Open | 3rd floor A Wing"
             eventFour="1-2AM | Google Cloud Platform | B117"
-            eventFive="2-3AM | Steven Kneiser Tech Talk | B117"
+            eventFive="2-3AM | Career QA w/Steven Kneiser | B117"
             eventSix="3-5AM | Shrek 1 | B119"
             eventSeven="7-9AM | Breakfast | A120"
             eventEight="10-11AM | Jun Wang Tech Talk | B119"

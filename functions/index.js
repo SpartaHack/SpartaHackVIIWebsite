@@ -52,7 +52,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
             from: functions.config().gmail.email,
             to: email,
             bcc: 'soteloju@msu.edu',
-            subject: approval ? 'SpartaHack Tomorrow' : 'About SpartaHack',
+            subject: approval ? 'SpartaHack Today!' : 'About SpartaHack',
             html: {path: approval ? confirmationPath : rejectionPath},
             //text: {path: approval ? approvalPath : rejectionPath},
             attachments: [{

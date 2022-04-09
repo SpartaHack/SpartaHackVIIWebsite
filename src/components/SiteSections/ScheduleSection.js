@@ -74,7 +74,7 @@ const ScheduleSection = () => {
             eventOne="1-2PM | SpartaSoft Talk | B119"
             eventTwo="2-3PM | Web Apps Talk (KL&A) | B117"
             eventThree="3-4PM | Tech Talk | B119"
-            eventFour="4:30-5:30PM | Fatima Taj Talk | B117"
+            eventFour="4:30-5:30PM | Fatima Taj Talk | CANCELED"
             eventFive="6-7PM | Dinner by Ford | B Atrium"
             eventSix="7-9PM | Meditation Room | B106"
             eventSeven="8-9PM | MLH CUP Stacking | B100"

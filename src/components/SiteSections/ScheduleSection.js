@@ -76,7 +76,7 @@ const ScheduleSection = () => {
             eventThree="4:30-5:30PM | Fatima Taj Talk | CANCELED"
             eventFour="6-7PM | Dinner by Ford | B Atrium"
             eventFive="7-9PM | Meditation Room | B106"
-            eventSix="8-9PM | MLH CUP Stacking | B100"
+            eventSix="8-9PM | MLH CUP Stacking | B117"
             eventSeven="9-10PM | Smash Bros Tourny | A122"
             eventEight="10:30-11:30PM | Chess Tourney  | A122"
             eventNine="11:30 PM -1AM | Shrek 2 | B119"

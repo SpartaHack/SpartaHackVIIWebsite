@@ -8,370 +8,292 @@
 .footer-section-grey-divider{
     height: 2px;
     background-color: #535353;
-    max-width: 91%;
+    width: 90%;
     margin: 0 auto;
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
     }
   }
 
   @media (min-width: 576px) and (orientation: portrait) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
     }
   }
   
   @media (min-width: 576px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
     }
   }
   
   @media (min-width: 768px) and (orientation: portrait) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 90%;
-        margin: 0 auto;
     }
   }
   
   @media (min-width: 768px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 90%;
-        margin: 0 auto;
     }
   }
 
   @media (min-width: 922px) and (orientation: portrait) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 85%;
-        margin: 0 auto;
     }
   }
   
   @media (min-width: 922px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 90%;
-        margin: 0 auto;
     }
   }
 
   @media (min-width: 1200px) and (orientation: portrait) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
     } 
   }
   
   @media (min-width: 1200px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 85%;
-        margin: 0 auto;
     }
   }
   
 
   @media (min-width: 1400px) and (orientation: portrait) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
+
     }
   }
   
   @media (min-width: 1400px) and (orientation: landscape) {
     .footer-section-grey-divider{
-        height: 2px;
-        background-color: #535353;
-        max-width: 1450px;
-        margin: 0 auto;
+
     }
-  }
-
-
-
+  } 
 
 .footer-section-second-row{
     display: flex; 
-    justify-content: space-between;
-    max-width: 90%;
+    justify-content: space-around;
+    max-width: 99%;
     margin: 0 auto;
-    padding: 1em 0em 1em 0;
-    background-color: black;
+    padding: 3em 0em 3em 0;
     position: relative;
 }
 
-@media (max-width: 576px) and (orientation: landscape) {
+/* @media (max-width: 576px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
 
   @media (min-width: 576px) and (orientation: portrait) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 576px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 768px) and (orientation: portrait) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 768px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
 
   @media (min-width: 922px) and (orientation: portrait) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 922px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
 
   @media (min-width: 1200px) and (orientation: portrait) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 1200px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
 
   @media (min-width: 1400px) and (orientation: portrait) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
   }
   
   @media (min-width: 1400px) and (orientation: landscape) {
     .footer-section-second-row{
-        display: flex; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 3em 0em 3em 0;
-        position: relative;
     }
-  }
+  } */
 
-
-.footer-section-spartahack-mini-logo{
+/* .footer-section-spartahack-mini-logo{
     background-color: darkgreen;
     position: absolute;
     top : 15%;
     left : 48%;
-}
+} */
 
-.footer-section-social-media-icons-holder{
+
+/* .footer-section-social-media-icons-holder{
+    height: 2.5rem;
     background-color: darkgreen;
     display: flex;
+
+} */
+
+.social-media-icons{
+  max-width: 4rem;
+  height: 2.75rem;
 }
 
-.footer-section-thanks-for-visiting {
+.react-icons{
+  max-width: 4rem;
+  height: 2.75rem;
+}
+
+.mlh-logo{
+  max-width: 5rem;
+  height: 2.75rem;
+}
+
+@media (max-width: 576px) and (orientation: landscape) {
+  .mlh-logo{
+  }
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+  .mlh-logo{
+  } 
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+  .mlh-logo{
+  } 
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .mlh-logo{
+    max-width: 5.5rem;
+    height: 2.75rem;
+  } 
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .mlh-logo{
+    max-width: 5.5rem;
+    height: 2.75rem;
+  } 
+}
+
+@media (min-width: 922px) and (orientation: portrait) {
+  .mlh-logo{
+    max-width: 90%;
+  } 
+}
+
+@media (min-width: 922px) and (orientation: landscape) {
+  .mlh-logo{
+  } 
+}
+
+@media (min-width: 1200px) and (orientation: portrait) {
+  .mlh-logo{
+  } 
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+  .mlh-logo{
+  } 
+}
+
+
+@media (min-width: 1400px) and (orientation: portrait) {
+  .mlh-logo{
+  } 
+}
+
+@media (min-width: 1400px) and (orientation: landscape) {
+  .mlh-logo{
+    max-width: 10rem;
+    height: 4rem;
+  }
+}
+
+/* .footer-section-thanks-for-visiting {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     font-weight: bold;
     color: white;
-}
+} */
 
-@media (max-width: 576px) and (orientation: landscape) {
+/* @media (max-width: 576px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
 
   @media (min-width: 576px) and (orientation: portrait) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 576px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 768px) and (orientation: portrait) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 768px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
 
   @media (min-width: 922px) and (orientation: portrait) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 922px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
 
   @media (min-width: 1200px) and (orientation: portrait) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 1200px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
 
   @media (min-width: 1400px) and (orientation: portrait) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
   }
   
   @media (min-width: 1400px) and (orientation: landscape) {
     .footer-section-thanks-for-visiting {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: white;
     }
-  }
-
-
+  } */
 
 .footer-section-red-dots{
-    max-width: 90%;
-    height: 50px;
+    width: 96%;
+    height: 75px;
     background-image: radial-gradient(
       circle at 5px 5px,
       #C30909 3px,
@@ -383,154 +305,59 @@
 
 @media (max-width: 576px) and (orientation: landscape) {
     .footer-section-red-dots{
-        max-width: 1520px;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
 
   @media (min-width: 576px) and (orientation: portrait) {
     .footer-section-red-dots{
-        max-width: 1520px;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
   
   @media (min-width: 576px) and (orientation: landscape) {
-    .faq-header-text-underline {
-        background-color: red;
-        position: absolute;
-        bottom: 5%;
-        left: 4%;
-        height: 3px;
-        width: 85px;
-      }
+    .footer-section-red-dots{
+    } 
   }
   
   @media (min-width: 768px) and (orientation: portrait) {
     .footer-section-red-dots{
-        max-width: 90%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
   
   @media (min-width: 768px) and (orientation: landscape) {
     .footer-section-red-dots{
-        max-width: 95%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
 
   @media (min-width: 922px) and (orientation: portrait) {
     .footer-section-red-dots{
-        max-width: 95%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
+      max-width: 90%;
     } 
   }
   
   @media (min-width: 922px) and (orientation: landscape) {
     .footer-section-red-dots{
-        max-width: 95%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
 
   @media (min-width: 1200px) and (orientation: portrait) {
     .footer-section-red-dots{
-        max-width: 1520px;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
   
   @media (min-width: 1200px) and (orientation: landscape) {
     .footer-section-red-dots{
-        max-width: 95%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
   
 
   @media (min-width: 1400px) and (orientation: portrait) {
     .footer-section-red-dots{
-        max-width: 85%;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
     } 
   }
   
   @media (min-width: 1400px) and (orientation: landscape) {
     .footer-section-red-dots{
-        max-width: 1520px;
-        height: 75px;
-        background-image: radial-gradient(
-          circle at 5px 5px,
-          #C30909 3px,
-          transparent 0
-        );
-        background-size: 25px 25px;
-        margin: 0 auto;
+      width: 95%;
+      max-width: 2000px;
     } 
   }
-  
-  

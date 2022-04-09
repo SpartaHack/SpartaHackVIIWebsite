@@ -8,8 +8,7 @@ import SponsorsSection from "./SponsorsSection";
 import FAQSection from "./FAQSection";
 import MapSection from "./MapSection";
 import PartnersSection from "./PartnersSection";
-
-// import FooterSection from "./FooterSection";
+import FooterSection from "./FooterSection";
 
 // Top most section of the Home Page 
 
@@ -286,7 +285,7 @@ const HomeSection = () => {
       <FAQSection/>
       <SponsorsSection/>
       <PartnersSection/>
-      {/* <FooterSection/> */}
+      <FooterSection/>
     </div>
   );
 };

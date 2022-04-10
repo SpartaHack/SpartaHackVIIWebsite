@@ -88,10 +88,10 @@ const ScheduleSection = () => {
             eventTwo="12:30-5:30AM | Saurik | B117"
             eventThree="7-9AM | Breakfast | A120"
             eventFour="8-9AM | Devpost Info Session | B117"
-            eventFive="10-12PM | Judge Registration | B106"
+            eventFive="10-12PM | Judge Registration | A136"
             eventSix="12PM | Hacking Ends"
             eventSeven="12PM-1PM | Lunch | A120"
-            eventEight="12:45PM | Judging Assignments | B100"
+            eventEight="12:45PM | Judging Assignments | A136"
             eventNine="1-3:30PM | Hack Expo | B Hallway & Atrium"
             eventTen="4-5:30PM | Closing Ceremony | B115"
           />

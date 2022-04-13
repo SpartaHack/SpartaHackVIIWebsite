@@ -257,8 +257,9 @@ const HomeSection = () => {
             size="lg"
             onClick={authenticationButtonHandler}
             style={{ fontFamily: "Montserrat", fontWeight: "bold" }}
+            disabled={true}
           >
-            Apply Now
+            See you next year!
           </Button>
 
           <h3 className="scroll"> Scroll</h3>
